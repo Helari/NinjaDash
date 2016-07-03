@@ -59,6 +59,7 @@ public class ND_Enemy : MonoBehaviour {
         if (this != null)
         {
             m_fSlowModifier = 3.56f / m_fSpeed;
+            ResetColor();
         }
     }
     public void Activate() //(Re)Activation by POOL
