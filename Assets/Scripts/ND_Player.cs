@@ -6,10 +6,14 @@ public class ND_Player : MonoBehaviour {
     public float m_fSlowMotionRecastTime = 3.0f;
 
     private ND_DashPath m_DashPath;
+    public Renderer m_LoadingMaterial;
     public bool m_bSlowMotionInProgress = false;
     public bool m_bSlowMotionReady = true;
+    private bool m_bSlowMotionReloading = false;
     public int m_iCurrentHP = 5;
-		
+
+    float reloadElapsed = 0.0f;
+
 	// Use this for initialization
     void Start()
     {
@@ -17,6 +21,8 @@ public class ND_Player : MonoBehaviour {
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
         GameEventManager.DamagePlayer += GetDamage;
         m_DashPath = gameObject.GetComponent<ND_DashPath>();
+
+        m_LoadingMaterial.material.SetFloat("_Cutoff", 0.001f);
 	}
 	
     private RuntimePlatform m_Platform = Application.platform;
@@ -42,6 +48,23 @@ public class ND_Player : MonoBehaviour {
                     checkTouch(Input.mousePosition);
                 }
             }
+        }
+        if(m_bSlowMotionReloading)
+        {
+            if(reloadElapsed < m_fSlowMotionRecastTime)
+            {
+                reloadElapsed += Time.deltaTime;
+
+                m_LoadingMaterial.material.SetFloat("_Cutoff", 1.015f-reloadElapsed/m_fSlowMotionRecastTime);
+            }
+            //float i = 0.0f;
+            //float rate = 1.0f / m_fSlowMotionRecastTime;
+            //while (i < 1.0f)
+            //{
+            //    Debug.Log(i);
+            //    i += Time.deltaTime * rate;
+            //    float test = Mathf.Lerp(0.99f, 0.01f, i);
+            //}
         }
     }
 
@@ -86,6 +109,7 @@ public class ND_Player : MonoBehaviour {
         if (this != null)
         {
             m_bSlowMotionInProgress = true;
+            m_LoadingMaterial.material.SetFloat("_Cutoff", 1.0f);
         }
     }
     void SlowMoDEActivation()
@@ -95,6 +119,9 @@ public class ND_Player : MonoBehaviour {
            // this.transform.position = new Vector3(0.33802f, 0.17451f, -0.3f);//Vector3.zero; Done in DashPath.cs at the end of Dash
             m_bSlowMotionInProgress = false;
             m_bSlowMotionReady = false;
+            m_bSlowMotionReloading = true;
+            m_LoadingMaterial.material.SetFloat("_Cutoff", 1.0f);
+            reloadElapsed = 0.0f;
             StartCoroutine("resetSlowMotionDelay");
         }
     }
@@ -102,5 +129,6 @@ public class ND_Player : MonoBehaviour {
     {
         yield return new WaitForSeconds(m_fSlowMotionRecastTime);
         m_bSlowMotionReady = true;
+        m_bSlowMotionReloading = false;
     }
 }
