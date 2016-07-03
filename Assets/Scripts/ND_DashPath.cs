@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 public class ND_DashPath : MonoBehaviour {
 
-    private GameObject m_LastSelected;
-    private GameObject m_SecondLastSelected;
+    private GameObject m_LastSelected = null;
+    private GameObject m_SecondLastSelected = null;
     private List<GameObject> m_DashPlanning = new List<GameObject>();
     private List<GameObject> m_DashDisplay = new List<GameObject>();
 
@@ -38,13 +38,34 @@ public class ND_DashPath : MonoBehaviour {
     public void TryAddNewTarget(GameObject target)
     {
         //TODO : Check if enemy has still HP and if he wasn't touched the 2 previous times
-        if(!m_DashPlanning.Contains(target))
+        //if(!m_DashPlanning.Contains(target))
+        ND_Enemy enemyComp = target.GetComponent<ND_Enemy>();
+        if(enemyComp == null)
         {
-            m_SecondLastSelected = m_LastSelected;
-            m_LastSelected = target;
-            Color c = target.GetComponent<Renderer>().material.GetColor("_Color");
-            target.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);//new Color(0.5f, 0.5f, 0.5f, 1));//(c.r - 70.0f / 255, c.g + 20.0f / 255, c.b + 40.0f / 255));
-            m_DashPlanning.Add(target);
+            enemyComp = target.transform.parent.gameObject.GetComponent<ND_Enemy>();
+        }
+        if (enemyComp != null && (enemyComp.m_uHPCurrent) > 0)
+        {
+            if (!((m_LastSelected != null && target == m_LastSelected) || (m_SecondLastSelected != null && target == m_SecondLastSelected)))
+            {
+                target.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);//new Color(0.5f, 0.5f, 0.5f, 1));//(c.r - 70.0f / 255, c.g + 20.0f / 255, c.b + 40.0f / 255));
+                if (m_SecondLastSelected != null)
+                {
+                    ND_Enemy secondEnemyComp = m_SecondLastSelected.GetComponent<ND_Enemy>();
+                    if(secondEnemyComp == null)
+                    {
+                        secondEnemyComp = m_SecondLastSelected.transform.parent.gameObject.GetComponent<ND_Enemy>();
+                    }
+                    if (secondEnemyComp != null && (secondEnemyComp.m_uHP - 1) > 0 && (secondEnemyComp.m_uHPCurrent) > 0)
+                    {
+                        secondEnemyComp.ResetColor();
+                    }
+                }
+                enemyComp.Damage();
+                m_SecondLastSelected = m_LastSelected;
+                m_LastSelected = target.gameObject;
+                m_DashPlanning.Add(target);
+            }
         }
     }
     public void StartDash()
@@ -52,7 +73,7 @@ public class ND_DashPath : MonoBehaviour {
         if (m_DashPlanning.Count > 0)
         {
             m_iCurrentTargetIndex = 0;
-            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 20.0f));
+            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 50.0f));
         }
         else
         {
@@ -70,7 +91,7 @@ public class ND_DashPath : MonoBehaviour {
         m_iCurrentTargetIndex++;
         if (m_iCurrentTargetIndex < m_DashPlanning.Count)
         {
-            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 30.0f));
+            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 60.0f));
         }
         else if (m_iCurrentTargetIndex == m_DashPlanning.Count)
         {
@@ -94,7 +115,7 @@ public class ND_DashPath : MonoBehaviour {
     }
     IEnumerator LastHit()
     {
-        StartCoroutine(MoveOverSpeed(m_Player.gameObject, new Vector3(0.33802f, 0.17451f, -0.3f), 10.0f));
+        StartCoroutine(MoveOverSpeed(m_Player.gameObject, new Vector3(0.33802f, 0.17451f, -0.3f), 30.0f));
         yield return new WaitForSeconds(1.0f); // Delay to play death anims
         foreach (GameObject line in m_DashDisplay)
         {
@@ -104,11 +125,11 @@ public class ND_DashPath : MonoBehaviour {
         {
             if (enemy.GetComponent<ND_Enemy>() != null)
             {
-                enemy.GetComponent<ND_Enemy>().Damage();
+                enemy.GetComponent<ND_Enemy>().CheckDeath();
             }
             else if (enemy.transform.parent.gameObject.GetComponent<ND_Enemy>() != null)
             {
-                enemy.transform.parent.gameObject.GetComponent<ND_Enemy>().Damage();
+                enemy.transform.parent.gameObject.GetComponent<ND_Enemy>().CheckDeath();
             }
         }
         m_DashDisplay.Clear();
