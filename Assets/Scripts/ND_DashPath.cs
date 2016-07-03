@@ -5,11 +5,13 @@ using System.Collections.Generic;
 public class ND_DashPath : MonoBehaviour {
 
     private GameObject m_LastSelected;
+    private GameObject m_SecondLastSelected;
     private List<GameObject> m_DashPlanning = new List<GameObject>();
     private List<GameObject> m_DashDisplay = new List<GameObject>();
 
     private int m_iCurrentTargetIndex = 0;
     public ND_Player m_Player;
+    public Color m_cTargetColor;
 
 	// Use this for initialization
 	void Start () {
@@ -38,9 +40,10 @@ public class ND_DashPath : MonoBehaviour {
         //TODO : Check if enemy has still HP and if he wasn't touched the 2 previous times
         if(!m_DashPlanning.Contains(target))
         {
+            m_SecondLastSelected = m_LastSelected;
             m_LastSelected = target;
             Color c = target.GetComponent<Renderer>().material.GetColor("_Color");
-            target.GetComponent<Renderer>().material.SetColor("_Color", new Color(0.5f, 0.5f, 0.5f, 1));//(c.r - 70.0f / 255, c.g + 20.0f / 255, c.b + 40.0f / 255));
+            target.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);//new Color(0.5f, 0.5f, 0.5f, 1));//(c.r - 70.0f / 255, c.g + 20.0f / 255, c.b + 40.0f / 255));
             m_DashPlanning.Add(target);
         }
     }
@@ -73,10 +76,6 @@ public class ND_DashPath : MonoBehaviour {
         {
             StartCoroutine("LastHit");
         }
-        else if (m_DashPlanning.Count == 0 && m_iCurrentTargetIndex != 0)
-        {
-            GameEventManager.TriggerSlowMotionState_End();
-        }
     }
     void DrawLine(Vector3 start, Vector3 end, Color color)
     {
@@ -95,7 +94,8 @@ public class ND_DashPath : MonoBehaviour {
     }
     IEnumerator LastHit()
     {
-        yield return new WaitForSeconds(1);
+        StartCoroutine(MoveOverSpeed(m_Player.gameObject, new Vector3(0.33802f, 0.17451f, -0.3f), 10.0f));
+        yield return new WaitForSeconds(1.0f); // Delay to play death anims
         foreach (GameObject line in m_DashDisplay)
         {
             Destroy(line);
@@ -111,8 +111,9 @@ public class ND_DashPath : MonoBehaviour {
                 enemy.transform.parent.gameObject.GetComponent<ND_Enemy>().Damage();
             }
         }
-        StartCoroutine(MoveOverSpeed(m_Player.gameObject, new Vector3(0.33802f, 0.17451f, -0.3f), 10.0f));
         m_DashDisplay.Clear();
         m_DashPlanning.Clear();
+
+        GameEventManager.TriggerSlowMotionState_End();
     }
 }
