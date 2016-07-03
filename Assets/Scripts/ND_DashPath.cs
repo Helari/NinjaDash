@@ -22,8 +22,8 @@ public class ND_DashPath : MonoBehaviour {
         {
             if (m_DashPlanning.Count==1)
             {
-                Debug.Log("Create " + m_DashPlanning.Count);
-                Debug.Log("Create " + m_DashDisplay.Count);
+                //Debug.Log("Create " + m_DashPlanning.Count);
+                //Debug.Log("Create " + m_DashDisplay.Count);
                 DrawLine(Vector3.zero, m_DashPlanning[0].transform.position, Color.red);
             }
             else
@@ -33,12 +33,14 @@ public class ND_DashPath : MonoBehaviour {
         }
 	}
 
-    public void AddNewTarget(GameObject target)
+    public void TryAddNewTarget(GameObject target)
     {
         //TODO : Check if enemy has still HP and if he wasn't touched the 2 previous times
         if(!m_DashPlanning.Contains(target))
         {
             m_LastSelected = target;
+            Color c = target.GetComponent<Renderer>().material.GetColor("_Color");
+            target.GetComponent<Renderer>().material.SetColor("_Color", new Color(0.5f, 0.5f, 0.5f, 1));//(c.r - 70.0f / 255, c.g + 20.0f / 255, c.b + 40.0f / 255));
             m_DashPlanning.Add(target);
         }
     }

@@ -29,7 +29,7 @@ public class ND_Player : MonoBehaviour {
 
     void Update()
     {
-        if (m_bSlowMotionReady)
+        if (m_bSlowMotionReady && Time.timeScale != 0)
         {
             if (m_Platform == RuntimePlatform.Android || m_Platform == RuntimePlatform.IPhonePlayer)
             {
@@ -81,7 +81,7 @@ public class ND_Player : MonoBehaviour {
             }
             else if (hit.transform.gameObject.CompareTag("Enemy") && m_bSlowMotionInProgress)
             {
-                m_DashPath.AddNewTarget(hit.transform.gameObject);
+                m_DashPath.TryAddNewTarget(hit.transform.gameObject);
             }
         }
     }

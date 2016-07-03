@@ -10,6 +10,7 @@ using System.Collections;
 public class ND_Enemy : MonoBehaviour {
 
     public uint             m_uHP = 1;                      //Health points
+    public Color            m_DefaultColor;
     private uint            m_uHPCurrent;
     public static float     m_fSlowModifierMax = 100.0f;    //The Speed and Time -SlowMotion ON- value, effect coefficient
     public float            m_fSpeed = 10.0f;               //Enemy Move Speed
@@ -100,6 +101,14 @@ public class ND_Enemy : MonoBehaviour {
     }
     public void Damage()
     {
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach(Renderer renderer in renderers)
+        {
+            Color c = renderer.material.GetColor("_Color");
+            renderer.material.SetColor("_Color", m_DefaultColor);//(c.r + 70.0f / 255, c.g - 20.0f / 255, c.b - 40.0f / 255));
+
+        }
+
         m_uHPCurrent -= 1;
         if (m_uHPCurrent <= 0)
         {
