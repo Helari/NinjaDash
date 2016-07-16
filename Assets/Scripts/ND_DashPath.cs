@@ -37,7 +37,7 @@ public class ND_DashPath : MonoBehaviour {
 
     public void TryAddNewTarget(GameObject target)
     {
-        //TODO : Check if enemy has still HP and if he wasn't touched the 2 previous times
+        //Check if enemy has still HP and if he wasn't touched the 2 previous times
         //if(!m_DashPlanning.Contains(target))
         ND_Enemy enemyComp = target.GetComponent<ND_Enemy>();
         if(enemyComp == null)
@@ -134,6 +134,9 @@ public class ND_DashPath : MonoBehaviour {
         }
         m_DashDisplay.Clear();
         m_DashPlanning.Clear();
+
+        m_SecondLastSelected = null;
+        m_LastSelected = null;
 
         GameEventManager.TriggerSlowMotionState_End();
     }
