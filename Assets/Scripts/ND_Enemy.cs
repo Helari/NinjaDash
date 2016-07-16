@@ -105,6 +105,10 @@ public class ND_Enemy : MonoBehaviour {
     {
         m_uHPCurrent -= 1;
     }
+    public void RevertDamage()
+    {
+        m_uHPCurrent += 1;
+    }
     public void CheckDeath()
     {
         if (m_uHPCurrent <= 0)

@@ -5,7 +5,7 @@ public class ND_Player : MonoBehaviour {
 
     public float m_fSlowMotionRecastTime = 3.0f;
 
-    private ND_DashPath m_DashPath;
+    public ND_DashPath m_DashPath;
     public Renderer m_LoadingMaterial;
     public bool m_bSlowMotionInProgress = false;
     public bool m_bSlowMotionReady = true;
@@ -20,7 +20,10 @@ public class ND_Player : MonoBehaviour {
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
         GameEventManager.DamagePlayer += GetDamage;
-        m_DashPath = gameObject.GetComponent<ND_DashPath>();
+        if (m_DashPath == null)
+        {
+            m_DashPath = GameObject.Find("DashPath").GetComponent<ND_DashPath>();//gameObject.GetComponent<ND_DashPath>();
+        }
 
         m_LoadingMaterial.material.SetFloat("_Cutoff", 0.001f);
 	}
@@ -82,6 +85,10 @@ public class ND_Player : MonoBehaviour {
             else if (hit.transform.gameObject.CompareTag("Enemy") && m_bSlowMotionInProgress)
             {
                 m_DashPath.TryAddNewTarget(hit.transform.gameObject);
+            }
+            else if (hit.transform.gameObject.CompareTag("DashPath") && m_bSlowMotionInProgress)
+            {
+                m_DashPath.RemoveLastLine();
             }
         }
     }

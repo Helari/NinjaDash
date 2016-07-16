@@ -6,8 +6,9 @@ public class ND_DashPath : MonoBehaviour {
 
     private GameObject m_LastSelected = null;
     private GameObject m_SecondLastSelected = null;
-    private List<GameObject> m_DashPlanning = new List<GameObject>();
-    private List<GameObject> m_DashDisplay = new List<GameObject>();
+    public List<GameObject> m_DashPlanning = new List<GameObject>();
+    public List<GameObject> m_DashDisplay = new List<GameObject>();
+    public BoxCollider m_hitBox = null;
 
     private int m_iCurrentTargetIndex = 0;
     public ND_Player m_Player;
@@ -15,7 +16,11 @@ public class ND_DashPath : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        m_Player = gameObject.GetComponent<ND_Player>();
+        if (m_Player == null)
+        {
+            m_Player = GameObject.Find("Player").GetComponent<ND_Player>();//gameObject.GetComponent<ND_Player>();
+        }
+        m_hitBox = gameObject.GetComponent<BoxCollider>();
 	}
 	
 	// Update is called once per frame
@@ -26,11 +31,11 @@ public class ND_DashPath : MonoBehaviour {
             {
                 //Debug.Log("Create " + m_DashPlanning.Count);
                 //Debug.Log("Create " + m_DashDisplay.Count);
-                DrawLine(Vector3.zero, m_DashPlanning[0].transform.position, Color.red);
+                DrawLine(Vector3.zero, m_DashPlanning[0].transform.position, Color.magenta);
             }
             else
             {
-                DrawLine(m_DashPlanning[m_DashPlanning.Count-2].transform.position, m_DashPlanning[m_DashPlanning.Count-1].transform.position, Color.red);
+                DrawLine(m_DashPlanning[m_DashPlanning.Count-2].transform.position, m_DashPlanning[m_DashPlanning.Count-1].transform.position, Color.magenta);
             }
         }
 	}
@@ -107,11 +112,94 @@ public class ND_DashPath : MonoBehaviour {
         lr.receiveShadows = false;
         lr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         lr.material = Resources.Load("LineMaterial", typeof(Material)) as Material;//new Material(Shader.Find("Mobile/Diffuse"));
+        lr.material.color = color;
         lr.SetColors(color, color);
         lr.SetWidth(0.1f, 0.1f);
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
         m_DashDisplay.Add(myLine);
+        if (m_DashDisplay.Count > 1)
+        {
+            m_DashDisplay[m_DashDisplay.Count - 2].GetComponent<LineRenderer>().material.color = Color.red;
+        }
+        addColliderToLine(start, end);
+    }
+    public void RemoveLastLine()
+    {
+        if (m_DashDisplay.Count > 0)
+        {
+            GameObject toDestroy = m_DashDisplay[m_DashDisplay.Count - 1];
+            m_DashDisplay.RemoveAt(m_DashDisplay.Count - 1);
+            DestroyObject(toDestroy);
+            if (m_DashDisplay.Count > 0)
+            {
+                m_DashDisplay[m_DashDisplay.Count - 1].GetComponent<LineRenderer>().material.color = Color.magenta;
+            }
+            ND_Enemy enemyComp = m_DashPlanning[m_DashPlanning.Count - 1].GetComponent<ND_Enemy>();
+            if (enemyComp == null)
+            {
+                enemyComp = m_DashPlanning[m_DashPlanning.Count - 1].transform.parent.gameObject.GetComponent<ND_Enemy>();
+            }
+            if (enemyComp != null)
+            {
+                enemyComp.ResetColor();
+                enemyComp.RevertDamage();
+                m_DashPlanning.RemoveAt(m_DashPlanning.Count - 1);
+                if (m_DashPlanning.Count > 0)
+                {
+                    m_LastSelected = m_DashPlanning[m_DashPlanning.Count - 1];
+                    if (m_DashPlanning.Count > 1)
+                    {
+                        m_SecondLastSelected = m_DashPlanning[m_DashPlanning.Count - 2];
+                        addColliderToLine(m_LastSelected.transform.position, m_SecondLastSelected.transform.position);
+
+                        //Color Management in case we roll back to a 2HP ennemy
+                        ND_Enemy secondEnemyComp = m_SecondLastSelected.GetComponent<ND_Enemy>();
+                        bool parent = false;
+                        if (secondEnemyComp == null)
+                        {
+                            parent = true;
+                            secondEnemyComp = m_SecondLastSelected.transform.parent.gameObject.GetComponent<ND_Enemy>();
+                        }
+                        if (secondEnemyComp != null && (secondEnemyComp.m_uHP - 1) > 0 /*&& (secondEnemyComp.m_uHPCurrent) > 0*/)
+                        {
+                            if (parent)
+                            {
+                                Renderer[] renderers = secondEnemyComp.GetComponentsInChildren<Renderer>();
+                                foreach (Renderer renderer in renderers)
+                                {
+                                    renderer.material.SetColor("_Color", m_cTargetColor);//(c.r + 70.0f / 255, c.g - 20.0f / 255, c.b - 40.0f / 255));
+                                }
+                            }
+                            else
+                            {
+                                secondEnemyComp.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        m_SecondLastSelected = null;
+                        addColliderToLine(m_LastSelected.transform.position, Vector3.zero);
+                    }
+                }
+                else
+                {
+                    m_LastSelected = null;
+                    m_SecondLastSelected = null;
+                    m_hitBox.transform.position = m_hitBox.size = Vector3.zero;
+                }
+            }
+        }
+    }
+    private void addColliderToLine(Vector3 startPos, Vector3 endPos)
+    {
+        float lineLength = Vector3.Distance (startPos, endPos); // length of line
+        m_hitBox.size = new Vector3(0.2f, 0.5f, lineLength); // size of collider is set where X is length of line, Y is width of line, Z will be set as per requirement
+        Vector3 midPoint = (startPos + endPos)/2;
+        m_hitBox.transform.position = midPoint; // setting position of collider object
+        Vector3 _direction = (startPos - transform.position).normalized;
+        transform.rotation = Quaternion.LookRotation(_direction);
     }
     IEnumerator LastHit()
     {
@@ -137,6 +225,7 @@ public class ND_DashPath : MonoBehaviour {
 
         m_SecondLastSelected = null;
         m_LastSelected = null;
+        m_hitBox.transform.position = m_hitBox.size = Vector3.zero;
 
         GameEventManager.TriggerSlowMotionState_End();
     }
