@@ -91,6 +91,10 @@ public class ND_DashPath : MonoBehaviour {
                 m_LastSelected = target.gameObject;
                 m_iCurrentDashCount--;
                 m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
+                if (enemyComp.m_iDashBonus != 0)
+                {
+                    OnDashBonus(true, enemyComp.m_iDashBonus);
+                }
                 m_DashPlanning.Add(target);
             }
         }
@@ -144,7 +148,7 @@ public class ND_DashPath : MonoBehaviour {
         {
             m_DashDisplay[m_DashDisplay.Count - 2].GetComponent<LineRenderer>().material.color = Color.red;
         }
-        addColliderToLine(start, end);
+        AddColliderToLine(start, end);
     }
     public void RemoveLastLine()
     {
@@ -169,13 +173,17 @@ public class ND_DashPath : MonoBehaviour {
                 m_iCurrentDashCount++;
                 m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
                 m_DashPlanning.RemoveAt(m_DashPlanning.Count - 1);
+                if(enemyComp.m_iDashBonus != 0)
+                {
+                    OnDashBonus(false, enemyComp.m_iDashBonus);
+                }
                 if (m_DashPlanning.Count > 0)
                 {
                     m_LastSelected = m_DashPlanning[m_DashPlanning.Count - 1];
                     if (m_DashPlanning.Count > 1)
                     {
                         m_SecondLastSelected = m_DashPlanning[m_DashPlanning.Count - 2];
-                        addColliderToLine(m_LastSelected.transform.position, m_SecondLastSelected.transform.position);
+                        AddColliderToLine(m_LastSelected.transform.position, m_SecondLastSelected.transform.position);
 
                         //Color Management in case we roll back to a 2HP ennemy
                         ND_Enemy secondEnemyComp = m_SecondLastSelected.GetComponent<ND_Enemy>();
@@ -204,7 +212,7 @@ public class ND_DashPath : MonoBehaviour {
                     else
                     {
                         m_SecondLastSelected = null;
-                        addColliderToLine(m_LastSelected.transform.position, Vector3.zero);
+                        AddColliderToLine(m_LastSelected.transform.position, Vector3.zero);
                     }
                 }
                 else
@@ -216,7 +224,19 @@ public class ND_DashPath : MonoBehaviour {
             }
         }
     }
-    private void addColliderToLine(Vector3 startPos, Vector3 endPos)
+    private void OnDashBonus(bool isIncrement, int value)
+    {
+        if(isIncrement)
+        {
+            m_iCurrentDashCount += value;
+        }
+        else
+        {
+            m_iCurrentDashCount -= value;
+        }
+        m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
+    }
+    private void AddColliderToLine(Vector3 startPos, Vector3 endPos)
     {
         float lineLength = Vector3.Distance (startPos, endPos); // length of line
         m_hitBox.size = new Vector3(0.2f, 0.5f, lineLength); // size of collider is set where X is length of line, Y is width of line, Z will be set as per requirement

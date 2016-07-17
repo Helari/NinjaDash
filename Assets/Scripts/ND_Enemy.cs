@@ -17,6 +17,7 @@ public class ND_Enemy : MonoBehaviour {
     public float            m_fSpeed = 10.0f;               //Enemy Move Speed
     public bool             m_available = true;             //Enemy is available in the pool
     private float           m_fSlowModifier = 1.0f;         //Current speed variable
+    public int              m_iDashBonus = 0;
 
     /// <summary>
     /// Gets a 3DVector on a circle of radius at angleDegrees 
