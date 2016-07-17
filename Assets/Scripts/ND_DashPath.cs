@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class ND_DashPath : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class ND_DashPath : MonoBehaviour {
     public ND_Player m_Player;
     public Text m_DashText;
     public Color m_cTargetColor;
+    public Transform m_DashBonus;
 
 	// Use this for initialization
 	void Start () {
@@ -93,7 +95,7 @@ public class ND_DashPath : MonoBehaviour {
                 m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
                 if (enemyComp.m_iDashBonus != 0)
                 {
-                    OnDashBonus(true, enemyComp.m_iDashBonus);
+                    OnDashBonus(true, enemyComp);
                 }
                 m_DashPlanning.Add(target);
             }
@@ -175,7 +177,7 @@ public class ND_DashPath : MonoBehaviour {
                 m_DashPlanning.RemoveAt(m_DashPlanning.Count - 1);
                 if(enemyComp.m_iDashBonus != 0)
                 {
-                    OnDashBonus(false, enemyComp.m_iDashBonus);
+                    OnDashBonus(false, enemyComp);
                 }
                 if (m_DashPlanning.Count > 0)
                 {
@@ -224,17 +226,30 @@ public class ND_DashPath : MonoBehaviour {
             }
         }
     }
-    private void OnDashBonus(bool isIncrement, int value)
+    private void OnDashBonus(bool isIncrement, ND_Enemy enemy)
     {
         if(isIncrement)
         {
-            m_iCurrentDashCount += value;
+            m_iCurrentDashCount += enemy.m_iDashBonus;
+
+            m_DashBonus.transform.position = enemy.transform.position;
+            m_DashBonus.gameObject.SetActive(true);
+            Sequence mySequenceScale = DOTween.Sequence();
+            mySequenceScale.Append(m_DashBonus.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.25f))
+              .Append(m_DashBonus.DOScale(new Vector3(0.5f, 0.5f, 0.5f), 0.25f));
+            Sequence mySequence = DOTween.Sequence();
+            mySequence.Append(mySequenceScale);
+            mySequence.Join(m_DashBonus.DOMove(new Vector3(-1.0f, 1.5f, 3.5f), 1f)).AppendCallback(HideBonus);
         }
         else
         {
-            m_iCurrentDashCount -= value;
+            m_iCurrentDashCount -= enemy.m_iDashBonus;
         }
         m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
+    }
+    private void HideBonus()
+    {
+        m_DashBonus.gameObject.SetActive(false);
     }
     private void AddColliderToLine(Vector3 startPos, Vector3 endPos)
     {
