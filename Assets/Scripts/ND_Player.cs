@@ -11,6 +11,7 @@ public class ND_Player : MonoBehaviour {
     public bool m_bSlowMotionReady = true;
     private bool m_bSlowMotionReloading = false;
     public int m_iCurrentHP = 5;
+    public int m_iDefaultDashCount = 5;
 
     float reloadElapsed = 0.0f;
 

@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ND_DashPath : MonoBehaviour {
 
     private GameObject m_LastSelected = null;
     private GameObject m_SecondLastSelected = null;
-    public List<GameObject> m_DashPlanning = new List<GameObject>();
-    public List<GameObject> m_DashDisplay = new List<GameObject>();
-    public BoxCollider m_hitBox = null;
+    private List<GameObject> m_DashPlanning = new List<GameObject>();
+    private List<GameObject> m_DashDisplay = new List<GameObject>();
+    private BoxCollider m_hitBox = null;
+    private int m_iCurrentDashCount = 0;
 
     private int m_iCurrentTargetIndex = 0;
     public ND_Player m_Player;
+    public Text m_DashText;
     public Color m_cTargetColor;
 
 	// Use this for initialization
@@ -21,6 +24,8 @@ public class ND_DashPath : MonoBehaviour {
             m_Player = GameObject.Find("Player").GetComponent<ND_Player>();//gameObject.GetComponent<ND_Player>();
         }
         m_hitBox = gameObject.GetComponent<BoxCollider>();
+        GameEventManager.SlowMotionState_Begin += SlowMoActivation;
+        GameEventManager.SlowMotionState_End += SlowMoDEActivation;
 	}
 	
 	// Update is called once per frame
@@ -40,6 +45,21 @@ public class ND_DashPath : MonoBehaviour {
         }
 	}
 
+    void SlowMoActivation()
+    {
+        if (this != null)
+        {
+            m_iCurrentDashCount = m_Player.m_iDefaultDashCount;
+            m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
+        }
+    }
+    void SlowMoDEActivation()
+    {
+        if (this != null)
+        {
+            m_DashText.text = "";
+        }
+    }
     public void TryAddNewTarget(GameObject target)
     {
         //Check if enemy has still HP and if he wasn't touched the 2 previous times
@@ -49,7 +69,7 @@ public class ND_DashPath : MonoBehaviour {
         {
             enemyComp = target.transform.parent.gameObject.GetComponent<ND_Enemy>();
         }
-        if (enemyComp != null && (enemyComp.m_uHPCurrent) > 0)
+        if (enemyComp != null && (enemyComp.m_uHPCurrent) > 0 && m_iCurrentDashCount > 0)
         {
             if (!((m_LastSelected != null && target == m_LastSelected) || (m_SecondLastSelected != null && target == m_SecondLastSelected)))
             {
@@ -69,6 +89,8 @@ public class ND_DashPath : MonoBehaviour {
                 enemyComp.Damage();
                 m_SecondLastSelected = m_LastSelected;
                 m_LastSelected = target.gameObject;
+                m_iCurrentDashCount--;
+                m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
                 m_DashPlanning.Add(target);
             }
         }
@@ -144,6 +166,8 @@ public class ND_DashPath : MonoBehaviour {
             {
                 enemyComp.ResetColor();
                 enemyComp.RevertDamage();
+                m_iCurrentDashCount++;
+                m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
                 m_DashPlanning.RemoveAt(m_DashPlanning.Count - 1);
                 if (m_DashPlanning.Count > 0)
                 {
