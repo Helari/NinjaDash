@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 public class ND_Player : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class ND_Player : MonoBehaviour {
     public bool m_bSlowMotionInProgress = false;
     public bool m_bSlowMotionReady = true;
     private bool m_bSlowMotionReloading = false;
+    private bool m_bHitPunchInProgress = false;
+    private bool m_bHitPunchReloading = false;
     public int m_iCurrentHP = 5;
     public int m_iDefaultDashCount = 5;
 
@@ -33,7 +36,7 @@ public class ND_Player : MonoBehaviour {
 
     void Update()
     {
-        if (m_bSlowMotionReady && Time.timeScale != 0)
+        if (/*m_bSlowMotionReady && */Time.timeScale != 0)
         {
             if (m_Platform == RuntimePlatform.Android || m_Platform == RuntimePlatform.IPhonePlayer)
             {
@@ -79,17 +82,24 @@ public class ND_Player : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.transform.gameObject.CompareTag("Player"))
+            if (hit.transform.gameObject.CompareTag("Player") && m_bSlowMotionReady && !m_bHitPunchInProgress)
             {
                 trySlowMotion();
             }
-            else if (hit.transform.gameObject.CompareTag("Enemy") && m_bSlowMotionInProgress)
+            if(m_bSlowMotionInProgress)
             {
-                m_DashPath.TryAddNewTarget(hit.transform.gameObject);
+                if (hit.transform.gameObject.CompareTag("Enemy"))
+                {
+                    m_DashPath.TryAddNewTarget(hit.transform.gameObject);
+                }
+                else if (hit.transform.gameObject.CompareTag("DashPath"))
+                {
+                    m_DashPath.RemoveLastLine();
+                }
             }
-            else if (hit.transform.gameObject.CompareTag("DashPath") && m_bSlowMotionInProgress)
+            else if (!m_bSlowMotionInProgress && hit.transform.gameObject.CompareTag("Enemy") && !m_bHitPunchReloading)
             {
-                m_DashPath.RemoveLastLine();
+                PunchEnemy(hit.transform.gameObject);
             }
         }
     }
@@ -138,5 +148,37 @@ public class ND_Player : MonoBehaviour {
         yield return new WaitForSeconds(m_fSlowMotionRecastTime);
         m_bSlowMotionReady = true;
         m_bSlowMotionReloading = false;
+    }
+    private void PunchEnemy(GameObject enemy)
+    {
+        ND_Enemy enemyComp = enemy.GetComponent<ND_Enemy>();
+        if (enemyComp == null)
+        {
+            enemyComp = enemy.transform.parent.gameObject.GetComponent<ND_Enemy>();
+        }
+        if (enemyComp != null)
+        {
+            //Launch punch animation
+            Vector3 enemyHitPosition = enemy.transform.position;
+            m_bHitPunchInProgress = true;
+            m_bHitPunchReloading = true;
+            Sequence mySequencePunch = DOTween.Sequence();
+            mySequencePunch.Append(gameObject.transform.DOLookAt((Vector3.zero - enemyHitPosition), 0.2f, AxisConstraint.Y, Vector3.up)) //WHILE LOOKINGAT
+                        .Join(gameObject.transform.DOJump(enemy.transform.position, 0.5f, 1, .25f)) //JUMP
+                //.Append(gameObject.transform.DOShakePosition(0.5f, (enemy.transform.position - Vector3.zero), 15, 25.0f)) //On Jump end, Shake
+                .Append(gameObject.transform.DORotate(Vector3.zero, 0.5f)) //And Look Back home
+                .Join(enemy.transform.parent.transform.DOJump((enemyHitPosition - Vector3.zero) * 2.0f, 0.25f, 1, .35f)) //And Push Ennemy
+                .Join(gameObject.transform.DOMove(Vector3.zero, 0.5f)).AppendCallback(ResetPunch); //Then Come back and Reset
+            //    m_DashBonus.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.25f))
+            //  .Append(m_DashBonus.DOScale(new Vector3(0.5f, 0.5f, 0.5f), 0.25f));
+            //Sequence mySequence = DOTween.Sequence();
+            //mySequence.Append(mySequenceScale);
+            //mySequence.Join(m_DashBonus.DOMove(new Vector3(-1.0f, 1.5f, 3.5f), 1f)).AppendCallback(HideBonus);
+        }
+    }
+    private void ResetPunch()
+    {
+        m_bHitPunchInProgress = false;
+        m_bHitPunchReloading = false; //will be used for skill recast
     }
 }

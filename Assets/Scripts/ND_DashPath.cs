@@ -14,8 +14,10 @@ public class ND_DashPath : MonoBehaviour {
     private int m_iCurrentDashCount = 0;
 
     private int m_iCurrentTargetIndex = 0;
+    private int m_iCurrentScore = 0;
     public ND_Player m_Player;
     public Text m_DashText;
+    public Text m_ScoreText;
     public Color m_cTargetColor;
     public Transform m_DashBonus;
 
@@ -71,7 +73,7 @@ public class ND_DashPath : MonoBehaviour {
         {
             enemyComp = target.transform.parent.gameObject.GetComponent<ND_Enemy>();
         }
-        if (enemyComp != null && (enemyComp.m_uHPCurrent) > 0 && m_iCurrentDashCount > 0)
+        if (enemyComp != null && (enemyComp.m_uHPCurrent) > 0 && m_iCurrentDashCount > 0 && enemyComp.CanBeTargetted())
         {
             if (!((m_LastSelected != null && target == m_LastSelected) || (m_SecondLastSelected != null && target == m_SecondLastSelected)))
             {
@@ -89,6 +91,10 @@ public class ND_DashPath : MonoBehaviour {
                     }
                 }
                 enemyComp.Damage();
+                if(enemyComp.ShouldDie())
+                {
+                    m_iCurrentScore += enemyComp.m_iScore;
+                }
                 m_SecondLastSelected = m_LastSelected;
                 m_LastSelected = target.gameObject;
                 m_iCurrentDashCount--;
@@ -170,6 +176,10 @@ public class ND_DashPath : MonoBehaviour {
             }
             if (enemyComp != null)
             {
+                if (enemyComp.ShouldDie())
+                {
+                    m_iCurrentScore -= enemyComp.m_iScore;
+                }
                 enemyComp.ResetColor();
                 enemyComp.RevertDamage();
                 m_iCurrentDashCount++;
@@ -262,7 +272,7 @@ public class ND_DashPath : MonoBehaviour {
     }
     IEnumerator LastHit()
     {
-        StartCoroutine(MoveOverSpeed(m_Player.gameObject, new Vector3(0.33802f, 0.17451f, -0.3f), 30.0f));
+        StartCoroutine(MoveOverSpeed(m_Player.gameObject, Vector3.zero, 30.0f));
         yield return new WaitForSeconds(1.0f); // Delay to play death anims
         foreach (GameObject line in m_DashDisplay)
         {
@@ -281,6 +291,7 @@ public class ND_DashPath : MonoBehaviour {
         }
         m_DashDisplay.Clear();
         m_DashPlanning.Clear();
+        m_ScoreText.text = "Score : " + m_iCurrentScore.ToString();
 
         m_SecondLastSelected = null;
         m_LastSelected = null;

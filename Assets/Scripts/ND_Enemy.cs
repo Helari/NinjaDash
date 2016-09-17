@@ -18,13 +18,14 @@ public class ND_Enemy : MonoBehaviour {
     public bool             m_available = true;             //Enemy is available in the pool
     private float           m_fSlowModifier = 1.0f;         //Current speed variable
     public int              m_iDashBonus = 0;
+    public int              m_iScore = 0;
 
     /// <summary>
     /// Gets a 3DVector on a circle of radius at angleDegrees 
     /// </summary>
     /// <param name="angleDegrees">The angle of the unit circle to get a point on (can be a random int between 0 and 360)</param>
     /// <param name="radius">The radius of the circle</param>
-    public Vector3 GetOnUnitCircle(float angleDegrees, float radius)
+    private Vector3 GetOnUnitCircle(float angleDegrees, float radius)
     {
         // initialize calculation variables
         float _x = 0;
@@ -47,6 +48,13 @@ public class ND_Enemy : MonoBehaviour {
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
         this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f);
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
+    }
+    void Update()
+    {
+        if(gameObject.transform.position == Vector3.zero)
+        {
+            DamagePlayer();
+        }
     }
     void SlowMoActivation()
     {
@@ -71,7 +79,7 @@ public class ND_Enemy : MonoBehaviour {
         m_uHPCurrent = m_uHP;
         StartCoroutine(ActivateEnemy(Random.Range(0, 5)));
     }
-	public IEnumerator ActivateEnemy (float delay) { //Start moving after a random delay
+	private IEnumerator ActivateEnemy (float delay) { //Start moving after a random delay
         m_available = false;
         m_fSlowModifier = 3.56f / m_fSpeed;
         yield return new WaitForSeconds(delay);
@@ -82,14 +90,13 @@ public class ND_Enemy : MonoBehaviour {
         //StartCoroutine (MoveOverSeconds (this.gameObject, Vector3.zero, m_fTime));
         StartCoroutine(MoveOverSpeed(this.gameObject, Vector3.zero, m_fSlowModifier));
 	}
-	public IEnumerator MoveOverSpeed (GameObject objectToMove, Vector3 end, float speed){
+	private IEnumerator MoveOverSpeed (GameObject objectToMove, Vector3 end, float speed){
 		// speed should be 1 unit per second
 		while (objectToMove.transform.position != end)
 		{
             objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, end, m_fSlowModifier * Time.deltaTime);
 			yield return new WaitForEndOfFrame ();
         }
-        DamagePlayer();
 	}
     private void DamagePlayer() //if arrived at destination
     {
@@ -110,14 +117,23 @@ public class ND_Enemy : MonoBehaviour {
     {
         m_uHPCurrent += 1;
     }
+    public bool ShouldDie()
+    {
+        return m_uHPCurrent <= 0;
+    }
     public void CheckDeath()
     {
-        if (m_uHPCurrent <= 0)
+        if (ShouldDie())
         {
             ResetColor();
             Death();
         }
     }
+    public int GetScoreValue()
+    {
+        return m_iScore;
+    }
+
     public void ResetColor()
     {
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
@@ -125,5 +141,9 @@ public class ND_Enemy : MonoBehaviour {
         {
             renderer.material.SetColor("_Color", m_DefaultColor);//(c.r + 70.0f / 255, c.g - 20.0f / 255, c.b - 40.0f / 255));
         }
+    }
+    public virtual bool CanBeTargetted()
+    {
+        return true;
     }
 }
