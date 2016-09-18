@@ -19,7 +19,12 @@ public class ND_DashPath : MonoBehaviour {
     public Text m_DashText;
     public Text m_ScoreText;
     public Color m_cTargetColor;
+    public Color m_cDefaultLineColor = Color.red;
+    public Color m_cLastLineColor = Color.magenta;
     public Transform m_DashBonus;
+
+    private RaycastHit hitInfo;
+    private List<Collider> deactivatedColliders = new List<Collider>();
 
 	// Use this for initialization
 	void Start () {
@@ -40,11 +45,11 @@ public class ND_DashPath : MonoBehaviour {
             {
                 //Debug.Log("Create " + m_DashPlanning.Count);
                 //Debug.Log("Create " + m_DashDisplay.Count);
-                DrawLine(Vector3.zero, m_DashPlanning[0].transform.position, Color.magenta);
+                DrawLine(Vector3.zero, m_DashPlanning[0].transform.position, m_cLastLineColor);
             }
             else
             {
-                DrawLine(m_DashPlanning[m_DashPlanning.Count-2].transform.position, m_DashPlanning[m_DashPlanning.Count-1].transform.position, Color.magenta);
+                DrawLine(m_DashPlanning[m_DashPlanning.Count-2].transform.position, m_DashPlanning[m_DashPlanning.Count-1].transform.position, m_cLastLineColor);
             }
         }
 	}
@@ -73,10 +78,42 @@ public class ND_DashPath : MonoBehaviour {
         {
             enemyComp = target.transform.parent.gameObject.GetComponent<ND_Enemy>();
         }
-        if (enemyComp != null && (enemyComp.m_uHPCurrent) > 0 && m_iCurrentDashCount > 0 && enemyComp.CanBeTargetted())
+        if (enemyComp != null && (enemyComp.m_uHPCurrent) > 0 && m_iCurrentDashCount > 0)
         {
             if (!((m_LastSelected != null && target == m_LastSelected) || (m_SecondLastSelected != null && target == m_SecondLastSelected)))
             {
+                bool canBeTargetted = true;
+                if ((m_LastSelected != null && target != m_LastSelected))
+                {
+                    canBeTargetted = !HasShieldInTheWay(m_LastSelected.transform.position, enemyComp.transform.position);
+                }
+                else
+                {
+                    canBeTargetted = !HasShieldInTheWay(m_Player.transform.position, enemyComp.transform.position);
+                }
+                if (!canBeTargetted)
+                {
+                    return;
+                }
+
+                if (deactivatedColliders.Count > 0) //List of colliders deativated on ShieldEnemies after selecting them
+                {
+                    foreach (Collider col in deactivatedColliders)
+                    {
+                        col.enabled = true;
+                    }
+                    deactivatedColliders.Clear();
+                }
+
+                if (enemyComp.HasShieldComponent()) //If target has a shield, deactivate it until next add try
+                {
+                    foreach (Collider col in enemyComp.GetComponentsInChildren<Collider>())
+                    {
+                        col.enabled = false;
+                        deactivatedColliders.Add(col);
+                    }
+                }
+
                 target.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);//new Color(0.5f, 0.5f, 0.5f, 1));//(c.r - 70.0f / 255, c.g + 20.0f / 255, c.b + 40.0f / 255));
                 if (m_SecondLastSelected != null)
                 {
@@ -106,6 +143,31 @@ public class ND_DashPath : MonoBehaviour {
                 m_DashPlanning.Add(target);
             }
         }
+    }
+    private bool HasShieldInTheWay(Vector3 _from, Vector3 _to)
+    {
+        bool resutl = false;
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(_from, (_to - _from), Vector3.Distance(_to, _from));
+
+        for (int i = 0; i < hits.Length; i++) //Check if a shield is hit (and then can't dash on the target)
+        {
+            RaycastHit hit = hits[i];
+            if (hit.transform.tag == "Shield")
+            {
+                ND_Enemy enemyShieldComp = hit.transform.gameObject.GetComponent<ND_Enemy>();
+                if (enemyShieldComp == null)
+                {
+                    enemyShieldComp = hit.transform.parent.gameObject.GetComponent<ND_Enemy>();
+                }
+                if (enemyShieldComp.m_uHPCurrent > 0) //The shield is blocking only if the shieldEnemy is still alive
+                {
+                    resutl = true;
+                    break;
+                }
+            }
+        }
+        return resutl;
     }
     public void StartDash()
     {
@@ -137,7 +199,7 @@ public class ND_DashPath : MonoBehaviour {
             StartCoroutine("LastHit");
         }
     }
-    void DrawLine(Vector3 start, Vector3 end, Color color)
+    void DrawLine(Vector3 start, Vector3 end, Color color) //Draws a line using LineMaterial and adds a collider to it
     {
         GameObject myLine = new GameObject();
         myLine.transform.position = start;
@@ -154,21 +216,23 @@ public class ND_DashPath : MonoBehaviour {
         m_DashDisplay.Add(myLine);
         if (m_DashDisplay.Count > 1)
         {
-            m_DashDisplay[m_DashDisplay.Count - 2].GetComponent<LineRenderer>().material.color = Color.red;
+            m_DashDisplay[m_DashDisplay.Count - 2].GetComponent<LineRenderer>().material.color = m_cDefaultLineColor;
         }
         AddColliderToLine(start, end);
     }
-    public void RemoveLastLine()
+    public void RemoveLastLine() //Revert last action
     {
-        if (m_DashDisplay.Count > 0)
+        if (m_DashDisplay.Count > 0) //If we has at least one target selected
         {
-            GameObject toDestroy = m_DashDisplay[m_DashDisplay.Count - 1];
+            GameObject toDestroy = m_DashDisplay[m_DashDisplay.Count - 1]; //Remove last line
             m_DashDisplay.RemoveAt(m_DashDisplay.Count - 1);
             DestroyObject(toDestroy);
-            if (m_DashDisplay.Count > 0)
+            if (m_DashDisplay.Count > 0) //If there's still lines displayed, the last one takes the "last one color"
             {
-                m_DashDisplay[m_DashDisplay.Count - 1].GetComponent<LineRenderer>().material.color = Color.magenta;
+                m_DashDisplay[m_DashDisplay.Count - 1].GetComponent<LineRenderer>().material.color = m_cLastLineColor;
             }
+
+            //Revert enemy datas
             ND_Enemy enemyComp = m_DashPlanning[m_DashPlanning.Count - 1].GetComponent<ND_Enemy>();
             if (enemyComp == null)
             {
@@ -176,23 +240,49 @@ public class ND_DashPath : MonoBehaviour {
             }
             if (enemyComp != null)
             {
-                if (enemyComp.ShouldDie())
+                if (enemyComp.ShouldDie()) //Remove earned score
                 {
                     m_iCurrentScore -= enemyComp.m_iScore;
                 }
                 enemyComp.ResetColor();
                 enemyComp.RevertDamage();
+
+                if (enemyComp.HasShieldComponent() && deactivatedColliders.Count > 0) //List of colliders deativated on ShieldEnemies after selecting them
+                {
+                    foreach (Collider col in deactivatedColliders)
+                    {
+                        col.enabled = true;
+                    }
+                    deactivatedColliders.Clear();
+                }
+
                 m_iCurrentDashCount++;
                 m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
                 m_DashPlanning.RemoveAt(m_DashPlanning.Count - 1);
-                if(enemyComp.m_iDashBonus != 0)
+                if(enemyComp.m_iDashBonus != 0) //Revert dash bonus
                 {
                     OnDashBonus(false, enemyComp);
                 }
-                if (m_DashPlanning.Count > 0)
+                //Now, enemyComp points to the former last selected, if we still have some enemies selected, we can assign them to enemyComp and secondEnemyComp
+                if (m_DashPlanning.Count > 0) //Refresh last ennemy
                 {
                     m_LastSelected = m_DashPlanning[m_DashPlanning.Count - 1];
-                    if (m_DashPlanning.Count > 1)
+
+                    enemyComp = m_LastSelected.GetComponent<ND_Enemy>();
+                    if (enemyComp == null)
+                    {
+                        enemyComp = m_LastSelected.transform.parent.gameObject.GetComponent<ND_Enemy>();
+                    }
+                    if (enemyComp.HasShieldComponent()) //If target has a shield, deactivate it until next add try
+                    {
+                        foreach (Collider col in enemyComp.GetComponentsInChildren<Collider>())
+                        {
+                            col.enabled = false;
+                            deactivatedColliders.Add(col);
+                        }
+                    }
+
+                    if (m_DashPlanning.Count > 1) //Refresh second last ennemy
                     {
                         m_SecondLastSelected = m_DashPlanning[m_DashPlanning.Count - 2];
                         AddColliderToLine(m_LastSelected.transform.position, m_SecondLastSelected.transform.position);
@@ -205,7 +295,7 @@ public class ND_DashPath : MonoBehaviour {
                             parent = true;
                             secondEnemyComp = m_SecondLastSelected.transform.parent.gameObject.GetComponent<ND_Enemy>();
                         }
-                        if (secondEnemyComp != null && (secondEnemyComp.m_uHP - 1) > 0 /*&& (secondEnemyComp.m_uHPCurrent) > 0*/)
+                        if (secondEnemyComp != null && (secondEnemyComp.m_uHP - 1) > 0 /*&& (secondEnemyComp.m_uHPCurrent) > 0*/) //Color management for 2HP+ enemies
                         {
                             if (parent)
                             {
@@ -280,6 +370,10 @@ public class ND_DashPath : MonoBehaviour {
         }
         foreach (GameObject enemy in m_DashPlanning)
         {
+            if (enemy.transform.parent.gameObject.GetComponent<ND_EnemyBomb>() != null)
+            {
+                m_iCurrentScore += enemy.transform.parent.gameObject.GetComponent<ND_EnemyBomb>().GenerateExplosion();
+            }
             if (enemy.GetComponent<ND_Enemy>() != null)
             {
                 enemy.GetComponent<ND_Enemy>().CheckDeath();

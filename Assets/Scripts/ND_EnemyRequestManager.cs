@@ -10,8 +10,12 @@ public class ND_EnemyRequestManager : MonoBehaviour {
 
     public float basicApparitionFrequency = 1.0f;
     public float heavyApparitionFrequency = 5.0f;
+    public float shieldedApparitionFrequency = 7.0f;
+    public float bombApparitionFrequency = 7.0f;
     float timer = 0.0f;
     float timerHeavy = 0.0f;
+    float timerShielded = 0.0f;
+    float timerBomb = 0.0f;
     private bool started = false;
 
     private float timeModifier = 1.0f; //SlowMotion reaction (affects spawn timers)
@@ -42,10 +46,20 @@ public class ND_EnemyRequestManager : MonoBehaviour {
         ND_Enemy tempEnemy = ND_EnemyFactory.instance.GetObjectForType("Enemy", false).GetComponent<ND_Enemy>();
         tempEnemy.Activate();
     }
-
+    
     void spawnHeavy()
     {
         ND_Enemy tempEnemy = ND_EnemyFactory.instance.GetObjectForType("EnemyHeavy", false).GetComponent<ND_Enemy>();
+        tempEnemy.Activate();
+    }
+    void spawnShield()
+    {
+        ND_Enemy tempEnemy = ND_EnemyFactory.instance.GetObjectForType("EnemyShield", false).GetComponent<ND_Enemy>();
+        tempEnemy.Activate();
+    }
+    void spawnBomb()
+    {
+        ND_Enemy tempEnemy = ND_EnemyFactory.instance.GetObjectForType("EnemyBomb", false).GetComponent<ND_Enemy>();
         tempEnemy.Activate();
     }
 
@@ -61,6 +75,8 @@ public class ND_EnemyRequestManager : MonoBehaviour {
             //}
             timer += Time.deltaTime / timeModifier;
             timerHeavy += Time.deltaTime / timeModifier;
+            timerShielded += Time.deltaTime / timeModifier;
+            timerBomb += Time.deltaTime / timeModifier;
 
             if (timer >= (basicApparitionFrequency))
             {
@@ -71,6 +87,16 @@ public class ND_EnemyRequestManager : MonoBehaviour {
             {
                 timerHeavy = 0.0f;
                 spawnHeavy();
+            }
+            if (timerShielded >= (shieldedApparitionFrequency))
+            {
+                timerShielded = 0.0f;
+                spawnShield();
+            }
+            if (timerBomb >= (bombApparitionFrequency))
+            {
+                timerBomb = 0.0f;
+                spawnBomb();
             }
         }
 	}

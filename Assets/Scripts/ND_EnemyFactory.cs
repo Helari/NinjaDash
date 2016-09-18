@@ -83,11 +83,11 @@ public class ND_EnemyFactory : MonoBehaviour {
         {
             if(objectPrefabs[i].name == objectType)
             {
-                int bufferAmount;
+                //int bufferAmount;
 
-                if (i < amountToBuffer.Length) bufferAmount = amountToBuffer[i];
-                else
-                    bufferAmount = defaultBufferAmount;
+                //if (i < amountToBuffer.Length) bufferAmount = amountToBuffer[i];
+                //else
+                //    bufferAmount = defaultBufferAmount;
 
                 for (int j = 0; j < pooledObjects[i].Count; j++)
                 {

@@ -88,7 +88,7 @@ public class ND_Player : MonoBehaviour {
             }
             if(m_bSlowMotionInProgress)
             {
-                if (hit.transform.gameObject.CompareTag("Enemy"))
+                if (hit.transform.gameObject.CompareTag("Enemy") || hit.transform.gameObject.CompareTag("Shield"))
                 {
                     m_DashPath.TryAddNewTarget(hit.transform.gameObject);
                 }
@@ -97,7 +97,7 @@ public class ND_Player : MonoBehaviour {
                     m_DashPath.RemoveLastLine();
                 }
             }
-            else if (!m_bSlowMotionInProgress && hit.transform.gameObject.CompareTag("Enemy") && !m_bHitPunchReloading)
+            else if (!m_bSlowMotionInProgress && (hit.transform.gameObject.CompareTag("Enemy") || hit.transform.gameObject.CompareTag("Shield")) && !m_bHitPunchReloading)
             {
                 PunchEnemy(hit.transform.gameObject);
             }

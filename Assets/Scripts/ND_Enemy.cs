@@ -16,7 +16,7 @@ public class ND_Enemy : MonoBehaviour {
     public static float     m_fSlowModifierMax = 100.0f;    //The Speed and Time -SlowMotion ON- value, effect coefficient
     public float            m_fSpeed = 10.0f;               //Enemy Move Speed
     public bool             m_available = true;             //Enemy is available in the pool
-    private float           m_fSlowModifier = 1.0f;         //Current speed variable
+    protected float           m_fSlowModifier = 1.0f;         //Current speed variable
     public int              m_iDashBonus = 0;
     public int              m_iScore = 0;
 
@@ -78,6 +78,7 @@ public class ND_Enemy : MonoBehaviour {
         gameObject.SetActive(true);
         m_uHPCurrent = m_uHP;
         StartCoroutine(ActivateEnemy(Random.Range(0, 5)));
+        ResetColor();
     }
 	private IEnumerator ActivateEnemy (float delay) { //Start moving after a random delay
         m_available = false;
@@ -111,7 +112,10 @@ public class ND_Enemy : MonoBehaviour {
     }
     public void Damage()
     {
-        m_uHPCurrent -= 1;
+        if(m_uHPCurrent > 0)
+        {
+            m_uHPCurrent -= 1;
+        }
     }
     public void RevertDamage()
     {
@@ -142,8 +146,22 @@ public class ND_Enemy : MonoBehaviour {
             renderer.material.SetColor("_Color", m_DefaultColor);//(c.r + 70.0f / 255, c.g - 20.0f / 255, c.b - 40.0f / 255));
         }
     }
-    public virtual bool CanBeTargetted()
+
+    public bool HasShieldComponent()
     {
-        return true;
+       ND_EnemyShield shieldComponent = gameObject.GetComponent<ND_EnemyShield>();
+       return shieldComponent != null;
+    }
+    public bool CanBeTargetted(Vector3 _from)
+    {
+        ND_EnemyShield shieldComponent = gameObject.GetComponent<ND_EnemyShield>();
+        if(shieldComponent != null)
+        {
+            return true;// shieldComponent.CanBeTargetted(_from);
+        }
+        else
+        {
+            return true;
+        }
     }
 }
