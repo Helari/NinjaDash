@@ -46,6 +46,7 @@ public class ND_Enemy : MonoBehaviour {
     {
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
+        GameEventManager.GameOver += GameOver;
         this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f);
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
     }
@@ -128,6 +129,14 @@ public class ND_Enemy : MonoBehaviour {
     public void CheckDeath()
     {
         if (ShouldDie())
+        {
+            ResetColor();
+            Death();
+        }
+    }
+    void GameOver()
+    {
+        if (this != null)
         {
             ResetColor();
             Death();

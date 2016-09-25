@@ -15,6 +15,15 @@ public class ND_Timer : MonoBehaviour {
     {
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
+        GameEventManager.GameStart += GameStart;
+    }
+    void GameStart()
+    {
+        if (this != null)
+        {
+            time = 0.0f;
+            m_fSlowModifierTimer = 1.0f;
+        }
     }
     void SlowMoActivation()
     {

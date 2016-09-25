@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class ND_Player : MonoBehaviour {
 
+    private RuntimePlatform m_Platform = Application.platform;
     public float m_fSlowMotionRecastTime = 3.0f;
 
     public ND_DashPath m_DashPath;
@@ -13,7 +15,9 @@ public class ND_Player : MonoBehaviour {
     private bool m_bSlowMotionReloading = false;
     private bool m_bHitPunchInProgress = false;
     private bool m_bHitPunchReloading = false;
-    public int m_iCurrentHP = 5;
+    public int m_iHP = 5;
+    private int m_iCurrentHP = 5;
+    public Text m_HPText;
     public int m_iDefaultDashCount = 5;
 
     float reloadElapsed = 0.0f;
@@ -24,15 +28,15 @@ public class ND_Player : MonoBehaviour {
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
         GameEventManager.DamagePlayer += GetDamage;
+        GameEventManager.GameStart += GameStart;
         if (m_DashPath == null)
         {
             m_DashPath = GameObject.Find("DashPath").GetComponent<ND_DashPath>();//gameObject.GetComponent<ND_DashPath>();
         }
 
         m_LoadingMaterial.material.SetFloat("_Cutoff", 0.001f);
+        m_iCurrentHP = m_iHP;
 	}
-	
-    private RuntimePlatform m_Platform = Application.platform;
 
     void Update()
     {
@@ -62,7 +66,7 @@ public class ND_Player : MonoBehaviour {
             {
                 reloadElapsed += Time.deltaTime;
 
-                m_LoadingMaterial.material.SetFloat("_Cutoff", 1.015f-reloadElapsed/m_fSlowMotionRecastTime);
+                m_LoadingMaterial.material.SetFloat("_Cutoff", 1.02f-reloadElapsed/m_fSlowMotionRecastTime);
             }
             //float i = 0.0f;
             //float rate = 1.0f / m_fSlowMotionRecastTime;
@@ -115,11 +119,26 @@ public class ND_Player : MonoBehaviour {
             m_DashPath.StartDash();
         }
     }
+    void GameStart()
+    {
+        if (this != null)
+        {
+            StopAllCoroutines();
+            m_LoadingMaterial.material.SetFloat("_Cutoff", 0.001f);
+            m_iCurrentHP = m_iHP;
+            m_HPText.text = "HP : " + m_iCurrentHP.ToString();
+        }
+    }
     void GetDamage()
     {
         if (this != null)
         {
             m_iCurrentHP--;
+            m_HPText.text = "HP : " + m_iCurrentHP.ToString();
+            if(m_iCurrentHP <= 0)
+            {
+                GameEventManager.TriggerGameOver();
+            }
         }
     }
     void SlowMoActivation()

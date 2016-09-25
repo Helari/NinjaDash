@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ND_GameLoop : MonoBehaviour {
 
     public static bool isSlowMo = false;
     private bool slowMoActive = false;
+    public Button restartButton;
 
 	// Use this for initialization
-	void Start () {
-	
+    void Start()
+    {
+        GameEventManager.GameOver += GameOver;
 	}
 	
 	void Update () {
@@ -23,14 +26,29 @@ public class ND_GameLoop : MonoBehaviour {
             GameEventManager.TriggerSlowMotionState_End();
         }
 	}
+    public void Restart()
+    {
+        GameEventManager.TriggerPause();
+        restartButton.gameObject.SetActive(false);
+        GameEventManager.TriggerGameStart();
+    }
+    void GameOver()
+    {
+        if (this != null)
+        {
+            GameEventManager.TriggerPause();
+            restartButton.gameObject.SetActive(true);
+        }
+    }
 }
 
 public static class GameEventManager {
 
 	public delegate void GameEvent();
 
-    public static event GameEvent SlowMotionState_Begin, SlowMotionState_End, DamagePlayer;
+    public static event GameEvent SlowMotionState_Begin, SlowMotionState_End, DamagePlayer, GameOver, GameStart;
     public static bool GameSlowed = false;
+    public static bool PauseState = false;
 
     public static void TriggerSlowMotionState_Begin()
     {
@@ -50,9 +68,35 @@ public static class GameEventManager {
 	}
     public static void TriggerPlayerDamage()
     {
-        if(DamagePlayer != null)
+        if (DamagePlayer != null)
         {
             DamagePlayer();
+        }
+    }
+    public static void TriggerGameOver()
+    {
+        if (GameOver != null)
+        {
+            GameOver();
+        }
+    }
+    public static void TriggerGameStart()
+    {
+        if (GameStart != null)
+        {
+            GameStart();
+        }
+    }
+    public static void TriggerPause()
+    {
+        PauseState = !PauseState;
+        if (PauseState)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
         }
     }
 }

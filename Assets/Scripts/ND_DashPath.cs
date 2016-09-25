@@ -35,6 +35,7 @@ public class ND_DashPath : MonoBehaviour {
         m_hitBox = gameObject.GetComponent<BoxCollider>();
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
+        GameEventManager.GameOver += GameOver;
 	}
 	
 	// Update is called once per frame
@@ -54,6 +55,41 @@ public class ND_DashPath : MonoBehaviour {
         }
 	}
 
+    void GameOver()
+    {
+        if (this != null)
+        {
+            StopAllCoroutines();
+            foreach (GameObject line in m_DashDisplay)
+            {
+                Destroy(line);
+            }
+            m_DashDisplay.Clear();
+            m_DashPlanning.Clear();
+
+            m_SecondLastSelected = null;
+            m_LastSelected = null;
+            m_hitBox.transform.position = m_hitBox.size = Vector3.zero;
+            m_LastSelected = null;
+            m_SecondLastSelected = null;
+            m_iCurrentDashCount = 0;
+
+            m_iCurrentTargetIndex = 0;
+            m_iCurrentScore = 0;
+
+            if (deactivatedColliders.Count > 0) //List of colliders deativated on ShieldEnemies after selecting them
+            {
+                foreach (Collider col in deactivatedColliders)
+                {
+                    col.enabled = true;
+                }
+                deactivatedColliders.Clear();
+            }
+
+            m_ScoreText.text = "Score : " + m_iCurrentScore.ToString();
+            m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
+        }
+    }
     void SlowMoActivation()
     {
         if (this != null)

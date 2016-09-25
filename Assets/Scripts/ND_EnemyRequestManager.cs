@@ -16,7 +16,6 @@ public class ND_EnemyRequestManager : MonoBehaviour {
     float timerHeavy = 0.0f;
     float timerShielded = 0.0f;
     float timerBomb = 0.0f;
-    private bool started = false;
 
     private float timeModifier = 1.0f; //SlowMotion reaction (affects spawn timers)
 
@@ -24,7 +23,7 @@ public class ND_EnemyRequestManager : MonoBehaviour {
     {
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
-        started = true;
+        GameEventManager.PauseState = true;
     }
     void SlowMoActivation()
     {
@@ -66,7 +65,7 @@ public class ND_EnemyRequestManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (started)
+        if (GameEventManager.PauseState)
         {
             //timeModifier = 1.0f;
             //if(ND_Enemy.input)
@@ -102,14 +101,6 @@ public class ND_EnemyRequestManager : MonoBehaviour {
 	}
     public void switchPauseState()
     {
-        started = !started;
-        if (started)
-        {
-            Time.timeScale = 1;
-        }
-        else
-        {
-            Time.timeScale = 0;
-        }
+        GameEventManager.TriggerPause();
     }
 }
