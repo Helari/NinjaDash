@@ -12,9 +12,16 @@ public class ND_GameLoop : MonoBehaviour {
     void Start()
     {
         GameEventManager.GameOver += GameOver;
+        Time.timeScale = 0;
+        restartButton.gameObject.SetActive(true);
 	}
-	
-	void Update () {
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            GameEventManager.TriggerGameStart();
+        }
         if (Input.GetKeyDown(KeyCode.A) && !slowMoActive)
         {
             slowMoActive = isSlowMo = true;
@@ -48,7 +55,7 @@ public static class GameEventManager {
 
     public static event GameEvent SlowMotionState_Begin, SlowMotionState_End, DamagePlayer, GameOver, GameStart;
     public static bool GameSlowed = false;
-    public static bool PauseState = false;
+    public static bool PauseState = true;
 
     public static void TriggerSlowMotionState_Begin()
     {
@@ -89,7 +96,6 @@ public static class GameEventManager {
     }
     public static void TriggerPause()
     {
-        PauseState = !PauseState;
         if (PauseState)
         {
             Time.timeScale = 1;
@@ -98,5 +104,6 @@ public static class GameEventManager {
         {
             Time.timeScale = 0;
         }
+        PauseState = !PauseState;
     }
 }

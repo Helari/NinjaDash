@@ -23,7 +23,6 @@ public class ND_EnemyRequestManager : MonoBehaviour {
     {
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
-        GameEventManager.PauseState = true;
     }
     void SlowMoActivation()
     {
@@ -65,7 +64,7 @@ public class ND_EnemyRequestManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (GameEventManager.PauseState)
+        if (!GameEventManager.PauseState)
         {
             //timeModifier = 1.0f;
             //if(ND_Enemy.input)

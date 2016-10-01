@@ -20,7 +20,7 @@ public class ND_Player : MonoBehaviour {
     public Text m_HPText;
     public int m_iDefaultDashCount = 5;
 
-    float reloadElapsed = 0.0f;
+    private float reloadElapsed = 0.0f;
 
 	// Use this for initialization
     void Start()
@@ -33,9 +33,6 @@ public class ND_Player : MonoBehaviour {
         {
             m_DashPath = GameObject.Find("DashPath").GetComponent<ND_DashPath>();//gameObject.GetComponent<ND_DashPath>();
         }
-
-        m_LoadingMaterial.material.SetFloat("_Cutoff", 0.001f);
-        m_iCurrentHP = m_iHP;
 	}
 
     void Update()
@@ -67,6 +64,12 @@ public class ND_Player : MonoBehaviour {
                 reloadElapsed += Time.deltaTime;
 
                 m_LoadingMaterial.material.SetFloat("_Cutoff", 1.02f-reloadElapsed/m_fSlowMotionRecastTime);
+            }
+            else
+            {
+                m_bSlowMotionReady = true;
+                m_bSlowMotionReloading = false;
+                m_LoadingMaterial.material.SetFloat("_Cutoff", 0.001f);
             }
             //float i = 0.0f;
             //float rate = 1.0f / m_fSlowMotionRecastTime;
@@ -124,7 +127,10 @@ public class ND_Player : MonoBehaviour {
         if (this != null)
         {
             StopAllCoroutines();
-            m_LoadingMaterial.material.SetFloat("_Cutoff", 0.001f);
+            m_bSlowMotionReady = false;
+            m_bSlowMotionReloading = true;
+            m_LoadingMaterial.material.SetFloat("_Cutoff", 1.0f);
+            reloadElapsed = 0.0f;
             m_iCurrentHP = m_iHP;
             m_HPText.text = "HP : " + m_iCurrentHP.ToString();
         }
@@ -146,7 +152,7 @@ public class ND_Player : MonoBehaviour {
         if (this != null)
         {
             m_bSlowMotionInProgress = true;
-            m_LoadingMaterial.material.SetFloat("_Cutoff", 1.0f);
+            //m_LoadingMaterial.material.SetFloat("_Cutoff", 1.0f);
         }
     }
     void SlowMoDEActivation()
@@ -155,19 +161,22 @@ public class ND_Player : MonoBehaviour {
         {
            // this.transform.position = new Vector3(0.33802f, 0.17451f, -0.3f);//Vector3.zero; Done in DashPath.cs at the end of Dash
             m_bSlowMotionInProgress = false;
-            m_bSlowMotionReady = false;
-            m_bSlowMotionReloading = true;
-            m_LoadingMaterial.material.SetFloat("_Cutoff", 1.0f);
-            reloadElapsed = 0.0f;
-            StartCoroutine("resetSlowMotionDelay");
+            //StartCoroutine("resetSlowMotionDelay");
         }
     }
-    IEnumerator resetSlowMotionDelay()
+    public void ReloadDash()
     {
-        yield return new WaitForSeconds(m_fSlowMotionRecastTime);
-        m_bSlowMotionReady = true;
-        m_bSlowMotionReloading = false;
+        m_bSlowMotionReady = false;
+        m_bSlowMotionReloading = true;
+        m_LoadingMaterial.material.SetFloat("_Cutoff", 1.0f);
+        reloadElapsed = 0.0f;
     }
+    //IEnumerator resetSlowMotionDelay()
+    //{
+        //yield return new WaitForSeconds(m_fSlowMotionRecastTime);
+        //m_bSlowMotionReady = true;
+        //m_bSlowMotionReloading = false;
+    //}
     private void PunchEnemy(GameObject enemy)
     {
         ND_Enemy enemyComp = enemy.GetComponent<ND_Enemy>();

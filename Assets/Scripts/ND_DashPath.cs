@@ -207,7 +207,7 @@ public class ND_DashPath : MonoBehaviour {
     }
     public void StartDash()
     {
-        if (m_DashPlanning.Count > 0)
+        if (HasDashTargets())
         {
             m_iCurrentTargetIndex = 0;
             StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 50.0f));
@@ -217,6 +217,12 @@ public class ND_DashPath : MonoBehaviour {
             GameEventManager.TriggerSlowMotionState_End();
         }
     }
+
+    public bool HasDashTargets()
+    {
+        return m_DashPlanning.Count > 0;
+    }
+
     public IEnumerator MoveOverSpeed(GameObject objectToMove, Vector3 end, float speed)
     {
         // speed should be 1 unit per second
@@ -427,6 +433,7 @@ public class ND_DashPath : MonoBehaviour {
         m_LastSelected = null;
         m_hitBox.transform.position = m_hitBox.size = Vector3.zero;
 
+        m_Player.ReloadDash();
         GameEventManager.TriggerSlowMotionState_End();
     }
 }
