@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1ae5c606bafbbc74e8b9663124d29599
-timeCreated: 1474810618
+guid: e5df0085f3862c643b4ea20742b2abc4
+timeCreated: 1475314361
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: monster_basic_mesh
-    7400000: Take 001
+    4300000: Object001
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -70,7 +69,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

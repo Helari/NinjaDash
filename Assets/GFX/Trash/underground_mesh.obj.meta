@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 1ae5c606bafbbc74e8b9663124d29599
-timeCreated: 1474810618
+guid: e28f0304bd1d65346a707e081e749909
+timeCreated: 1470674936
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: monster_basic_mesh
-    7400000: Take 001
-    9500000: //RootNode
+    100000: underground_mesh
+    100002: //RootNode
+    400000: underground_mesh
+    400002: //RootNode
+    2300000: underground_mesh
+    3300000: underground_mesh
+    4300000: underground_mesh
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -35,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00499999989
+    globalScale: .0299999993
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -70,7 +70,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

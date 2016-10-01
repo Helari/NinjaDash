@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 1ae5c606bafbbc74e8b9663124d29599
-timeCreated: 1474810618
+guid: 2c7fa55560a0ad54d8c8db215949bdf1
+timeCreated: 1470057982
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: monster_basic_mesh
-    7400000: Take 001
-    9500000: //RootNode
+    100000: player_character_mesh
+    100002: //RootNode
+    400000: player_character_mesh
+    400002: //RootNode
+    2300000: player_character_mesh
+    3300000: player_character_mesh
+    4300000: player_character_mesh
   materials:
     importMaterials: 0
     materialName: 0
@@ -70,7 +70,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
