@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: dd232e43ee29e6247a1efb8ccf9f5a0a
+timeCreated: 1475930052
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: arm_left
+    100002: arm_right
+    100004: knob_arm_left
+    100006: knob_arm_right
+    100008: knob_torso
+    100010: mesh_arm_left
+    100012: mesh_arm_right
+    100014: mesh_torso
+    100016: //RootNode
+    100018: torso
+    400000: arm_left
+    400002: arm_right
+    400004: knob_arm_left
+    400006: knob_arm_right
+    400008: knob_torso
+    400010: mesh_arm_left
+    400012: mesh_arm_right
+    400014: mesh_torso
+    400016: //RootNode
+    400018: torso
+    2300000: arm_left
+    2300002: arm_right
+    2300004: mesh_arm_left
+    2300006: mesh_arm_right
+    2300008: mesh_torso
+    2300010: torso
+    3300000: arm_left
+    3300002: arm_right
+    3300004: mesh_arm_left
+    3300006: mesh_arm_right
+    3300008: mesh_torso
+    3300010: torso
+    4300000: torso
+    4300002: mesh_torso
+    4300004: arm_right
+    4300006: mesh_arm_right
+    4300008: arm_left
+    4300010: mesh_arm_left
+    7400000: destroy
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: destroy
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_left
+        weight: 1
+      - path: arm_left/knob_arm_left
+        weight: 1
+      - path: arm_left/mesh_arm_left
+        weight: 1
+      - path: arm_right
+        weight: 1
+      - path: arm_right/knob_arm_right
+        weight: 1
+      - path: arm_right/mesh_arm_right
+        weight: 1
+      - path: torso
+        weight: 1
+      - path: torso/knob_torso
+        weight: 1
+      - path: torso/mesh_torso
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0299999993
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
