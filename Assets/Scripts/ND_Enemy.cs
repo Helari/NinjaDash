@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 /// <summary>
 /// Enemy class :
@@ -19,6 +20,10 @@ public class ND_Enemy : MonoBehaviour {
     protected float           m_fSlowModifier = 1.0f;         //Current speed variable
     public int              m_iDashBonus = 0;
     public int              m_iScore = 0;
+
+    private bool stopped = false;
+    Vector3 stopPosition = Vector3.zero;
+    //public GameObject myDest;
 
     /// <summary>
     /// Gets a 3DVector on a circle of radius at angleDegrees 
@@ -52,9 +57,18 @@ public class ND_Enemy : MonoBehaviour {
     }
     void Update()
     {
-        if(gameObject.transform.position == Vector3.zero)
+        if (Vector3.Distance(gameObject.transform.position, Vector3.zero) <= Vector3.Distance(Vector3.zero, stopPosition) && !stopped)
         {
-            DamagePlayer();
+            stopped = true;
+            //TODO REMOVE Debug destination oriented point
+            //if (myDest != null)
+            //{
+            //    myDest.transform.parent = transform;
+            //    myDest.transform.position = transform.parent.position;
+            //}
+            //Launch punch animation
+            Sequence mySequencePunch = DOTween.Sequence();
+            mySequencePunch.Append(gameObject.transform.DOShakePosition(0.5f, 0.1f, 15, 10.0f)).AppendCallback(DamagePlayer); 
         }
     }
     void SlowMoActivation()
@@ -78,6 +92,7 @@ public class ND_Enemy : MonoBehaviour {
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
         gameObject.SetActive(true);
         m_uHPCurrent = m_uHP;
+        stopped = false;
         StartCoroutine(ActivateEnemy(Random.Range(0, 5)));
         ResetColor();
     }
@@ -89,12 +104,21 @@ public class ND_Enemy : MonoBehaviour {
         {
             SlowMoActivation();
         }
+        stopPosition = Vector3.zero + Vector3.Normalize(transform.position - Vector3.zero)*0.5f;
+
+        //TODO REMOVE Debug destination oriented point
+        //if (myDest != null)
+        //{
+        //    myDest.transform.parent = myDest.transform.parent.transform.parent;
+        //    myDest.transform.rotation = Quaternion.LookRotation(gameObject.transform.position);
+        //    myDest.transform.position = stopPosition;
+        //}
         //StartCoroutine (MoveOverSeconds (this.gameObject, Vector3.zero, m_fTime));
         StartCoroutine(MoveOverSpeed(this.gameObject, Vector3.zero, m_fSlowModifier));
 	}
 	private IEnumerator MoveOverSpeed (GameObject objectToMove, Vector3 end, float speed){
 		// speed should be 1 unit per second
-		while (objectToMove.transform.position != end)
+        while (objectToMove.transform.position != stopPosition)
 		{
             objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, end, m_fSlowModifier * Time.deltaTime);
 			yield return new WaitForEndOfFrame ();
