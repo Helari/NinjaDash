@@ -90,7 +90,9 @@ public class ND_Enemy : MonoBehaviour {
     {
         this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f);
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
+
         gameObject.SetActive(true);
+
         m_uHPCurrent = m_uHP;
         stopped = false;
         StartCoroutine(ActivateEnemy(Random.Range(0, 5)));
@@ -155,6 +157,11 @@ public class ND_Enemy : MonoBehaviour {
         if (ShouldDie())
         {
             ResetColor();
+
+            if (gameObject.GetComponent<ND_DismemberManager>() != null)
+            {
+                gameObject.GetComponent<ND_DismemberManager>().ResetSkelton();
+            }
             Death();
         }
     }
