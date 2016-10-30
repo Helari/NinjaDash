@@ -210,7 +210,7 @@ public class ND_DashPath : MonoBehaviour {
         if (HasDashTargets())
         {
             m_iCurrentTargetIndex = 0;
-            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 50.0f));
+            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 30.0f));
         }
         else
         {
@@ -234,7 +234,7 @@ public class ND_DashPath : MonoBehaviour {
         m_iCurrentTargetIndex++;
         if (m_iCurrentTargetIndex < m_DashPlanning.Count)
         {
-            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 60.0f));
+            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 30.0f));
         }
         else if (m_iCurrentTargetIndex == m_DashPlanning.Count)
         {
@@ -410,12 +410,65 @@ public class ND_DashPath : MonoBehaviour {
         {
             Destroy(line);
         }
+
+        m_SecondLastSelected = null;
+        m_LastSelected = null;
+        m_hitBox.transform.position = m_hitBox.size = Vector3.zero;
+
+        //List<ND_Enemy> colateralDamag = new List<ND_Enemy>();
+        Dictionary<ND_Enemy, Vector3> colateralDamage = new Dictionary<ND_Enemy, Vector3>(); ;
+
         foreach (GameObject enemy in m_DashPlanning)
         {
             if (enemy.transform.parent.gameObject.GetComponent<ND_EnemyBomb>() != null)
             {
-                m_iCurrentScore += enemy.transform.parent.gameObject.GetComponent<ND_EnemyBomb>().GenerateExplosion();
+                m_iCurrentScore += enemy.transform.parent.gameObject.GetComponent<ND_EnemyBomb>().GenerateExplosion(colateralDamage);
             }
+            if (enemy.GetComponent<ND_Enemy>() != null)
+            {
+                if (enemy.GetComponent<ND_Enemy>().ShouldDie())
+                {
+                    if (enemy.GetComponent<ND_DismemberManager>() != null)
+                        enemy.GetComponent<ND_DismemberManager>().Explode(Vector3.zero);
+                    enemy.GetComponent<ND_Enemy>().StopAllCoroutines();
+                }
+            }
+            else if (enemy.transform.parent.gameObject.GetComponent<ND_Enemy>() != null)
+            {
+                if (enemy.transform.parent.gameObject.GetComponent<ND_Enemy>().ShouldDie())
+                {
+                    if (enemy.transform.parent.gameObject.GetComponent<ND_DismemberManager>() != null)
+                        enemy.transform.parent.gameObject.GetComponent<ND_DismemberManager>().Explode(Vector3.zero);
+                    enemy.transform.parent.gameObject.GetComponent<ND_Enemy>().StopAllCoroutines();
+                }
+            }
+
+            //if (m_DashPlanning[m_iCurrentTargetIndex].GetComponent<ND_Enemy>() != null && m_DashPlanning[m_iCurrentTargetIndex].GetComponent<ND_Enemy>().ShouldDie() &&
+            //    m_DashPlanning[m_iCurrentTargetIndex].GetComponent<ND_DismemberManager>() != null)
+            //{
+            //    m_DashPlanning[m_iCurrentTargetIndex].GetComponent<ND_DismemberManager>().Explode();
+            //}
+            //else if (m_DashPlanning[m_iCurrentTargetIndex].transform.parent.gameObject.GetComponent<ND_Enemy>() != null &&
+            //    m_DashPlanning[m_iCurrentTargetIndex].transform.parent.gameObject.GetComponent<ND_Enemy>().ShouldDie() &&
+            //    m_DashPlanning[m_iCurrentTargetIndex].transform.parent.GetComponent<ND_DismemberManager>())
+            //{
+            //    m_DashPlanning[m_iCurrentTargetIndex].transform.parent.gameObject.GetComponent<ND_DismemberManager>().Explode();
+            //}
+        }
+        foreach (ND_Enemy enemy in colateralDamage.Keys) //Additionnal enemies that have to explode after bomb explosion
+        {
+            if (enemy.gameObject.GetComponent<ND_DismemberManager>() != null)
+            {
+                Vector3 explosionPosition = Vector3.zero;
+                colateralDamage.TryGetValue(enemy, out explosionPosition);
+                enemy.gameObject.GetComponent<ND_DismemberManager>().Explode(explosionPosition);
+            }
+            enemy.StopAllCoroutines();
+        }
+
+        yield return new WaitForSeconds(2.0f);
+        foreach (GameObject enemy in m_DashPlanning)
+        {
             if (enemy.GetComponent<ND_Enemy>() != null)
             {
                 enemy.GetComponent<ND_Enemy>().CheckDeath();
@@ -425,14 +478,13 @@ public class ND_DashPath : MonoBehaviour {
                 enemy.transform.parent.gameObject.GetComponent<ND_Enemy>().CheckDeath();
             }
         }
+        foreach (ND_Enemy enemy in colateralDamage.Keys) //Additionnal enemies that have to explode after bomb explosion
+        {
+            enemy.CheckDeath();
+        }
+        m_ScoreText.text = "Score : " + m_iCurrentScore.ToString();
         m_DashDisplay.Clear();
         m_DashPlanning.Clear();
-        m_ScoreText.text = "Score : " + m_iCurrentScore.ToString();
-
-        m_SecondLastSelected = null;
-        m_LastSelected = null;
-        m_hitBox.transform.position = m_hitBox.size = Vector3.zero;
-
         m_Player.ReloadDash();
         GameEventManager.TriggerSlowMotionState_End();
     }
