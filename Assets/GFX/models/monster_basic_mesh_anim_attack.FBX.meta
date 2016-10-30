@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: 0bc1fb8ccd995a24ab5182c8ae4910ac
+timeCreated: 1477839258
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: mbasic_arm_left_bone
+    100002: mbasic_arm_right_bone
+    100004: mbasic_finger_index_1_left_bone
+    100006: mbasic_finger_index_1_right_bone
+    100008: mbasic_finger_index_2_left_bone
+    100010: mbasic_finger_index_2_left_end_bone
+    100012: mbasic_finger_index_2_right_bone
+    100014: mbasic_finger_index_2_right_end_bone
+    100016: mbasic_finger_pinky_1_left_bone
+    100018: mbasic_finger_pinky_1_right_bone
+    100020: mbasic_finger_pinky_2_end_left_bone
+    100022: mbasic_finger_pinky_2_left_bone
+    100024: mbasic_finger_pinky_2_right_bone
+    100026: mbasic_finger_pinky_2_right_end_bone
+    100028: mbasic_finger_thumb_1_left_bone
+    100030: mbasic_finger_thumb_1_right_bone
+    100032: mbasic_finger_thumb_2_left_bone
+    100034: mbasic_finger_thumb_2_left_end_bone
+    100036: mbasic_finger_thumb_2_right_bone
+    100038: mbasic_finger_thumb_2_right_end_bone
+    100040: mbasic_foot_left_bone
+    100042: mbasic_foot_left_end_bone
+    100044: mbasic_foot_right_bone
+    100046: mbasic_foot_right_end_bone
+    100048: mbasic_forearm_left_bone
+    100050: mbasic_forearm_left_end_bone
+    100052: mbasic_forearm_right_bone
+    100054: mbasic_forearm_right_end_bone
+    100056: mbasic_hand_left_bone
+    100058: mbasic_hand_right_bone
+    100060: mbasic_head_bone
+    100062: mbasic_head_end_bone
+    100064: mbasic_hip_ctrlr
+    100066: mbasic_jaw_bone
+    100068: mbasic_jaw_end_bone
+    100070: mbasic_knee_left_bone
+    100072: mbasic_knee_right_bone
+    100074: mbasic_main_ctrlr
+    100076: mbasic_neck_bone
+    100078: mbasic_root_bone
+    100080: mbasic_root_ctrlr
+    100082: mbasic_root_end_bone
+    100084: mbasic_spine_bone
+    100086: mbasic_thigh_left_bone
+    100088: mbasic_thigh_right_bone
+    100090: monster_basic_mesh
+    100092: //RootNode
+    400000: mbasic_arm_left_bone
+    400002: mbasic_arm_right_bone
+    400004: mbasic_finger_index_1_left_bone
+    400006: mbasic_finger_index_1_right_bone
+    400008: mbasic_finger_index_2_left_bone
+    400010: mbasic_finger_index_2_left_end_bone
+    400012: mbasic_finger_index_2_right_bone
+    400014: mbasic_finger_index_2_right_end_bone
+    400016: mbasic_finger_pinky_1_left_bone
+    400018: mbasic_finger_pinky_1_right_bone
+    400020: mbasic_finger_pinky_2_end_left_bone
+    400022: mbasic_finger_pinky_2_left_bone
+    400024: mbasic_finger_pinky_2_right_bone
+    400026: mbasic_finger_pinky_2_right_end_bone
+    400028: mbasic_finger_thumb_1_left_bone
+    400030: mbasic_finger_thumb_1_right_bone
+    400032: mbasic_finger_thumb_2_left_bone
+    400034: mbasic_finger_thumb_2_left_end_bone
+    400036: mbasic_finger_thumb_2_right_bone
+    400038: mbasic_finger_thumb_2_right_end_bone
+    400040: mbasic_foot_left_bone
+    400042: mbasic_foot_left_end_bone
+    400044: mbasic_foot_right_bone
+    400046: mbasic_foot_right_end_bone
+    400048: mbasic_forearm_left_bone
+    400050: mbasic_forearm_left_end_bone
+    400052: mbasic_forearm_right_bone
+    400054: mbasic_forearm_right_end_bone
+    400056: mbasic_hand_left_bone
+    400058: mbasic_hand_right_bone
+    400060: mbasic_head_bone
+    400062: mbasic_head_end_bone
+    400064: mbasic_hip_ctrlr
+    400066: mbasic_jaw_bone
+    400068: mbasic_jaw_end_bone
+    400070: mbasic_knee_left_bone
+    400072: mbasic_knee_right_bone
+    400074: mbasic_main_ctrlr
+    400076: mbasic_neck_bone
+    400078: mbasic_root_bone
+    400080: mbasic_root_ctrlr
+    400082: mbasic_root_end_bone
+    400084: mbasic_spine_bone
+    400086: mbasic_thigh_left_bone
+    400088: mbasic_thigh_right_bone
+    400090: monster_basic_mesh
+    400092: //RootNode
+    4300000: monster_basic_mesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: monster_basic_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 42
+      lastFrame: 64
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mbasic_main_ctrlr
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_index_1_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_index_1_left_bone/mbasic_finger_index_2_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_index_1_left_bone/mbasic_finger_index_2_left_bone/mbasic_finger_index_2_left_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_pinky_1_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_pinky_1_left_bone/mbasic_finger_pinky_2_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_pinky_1_left_bone/mbasic_finger_pinky_2_left_bone/mbasic_finger_pinky_2_end_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_thumb_1_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_thumb_1_left_bone/mbasic_finger_thumb_2_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_left_bone/mbasic_forearm_left_bone/mbasic_forearm_left_end_bone/mbasic_hand_left_bone/mbasic_finger_thumb_1_left_bone/mbasic_finger_thumb_2_left_bone/mbasic_finger_thumb_2_left_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_index_1_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_index_1_right_bone/mbasic_finger_index_2_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_index_1_right_bone/mbasic_finger_index_2_right_bone/mbasic_finger_index_2_right_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_pinky_1_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_pinky_1_right_bone/mbasic_finger_pinky_2_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_pinky_1_right_bone/mbasic_finger_pinky_2_right_bone/mbasic_finger_pinky_2_right_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_thumb_1_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_thumb_1_right_bone/mbasic_finger_thumb_2_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_arm_right_bone/mbasic_forearm_right_bone/mbasic_forearm_right_end_bone/mbasic_hand_right_bone/mbasic_finger_thumb_1_right_bone/mbasic_finger_thumb_2_right_bone/mbasic_finger_thumb_2_right_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_neck_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_neck_bone/mbasic_jaw_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_neck_bone/mbasic_jaw_bone/mbasic_head_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_neck_bone/mbasic_jaw_bone/mbasic_head_bone/mbasic_head_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_neck_bone/mbasic_jaw_bone/mbasic_jaw_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_thigh_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_thigh_left_bone/mbasic_knee_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_thigh_left_bone/mbasic_knee_left_bone/mbasic_foot_left_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_thigh_left_bone/mbasic_knee_left_bone/mbasic_foot_left_bone/mbasic_foot_left_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_thigh_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_thigh_right_bone/mbasic_knee_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_thigh_right_bone/mbasic_knee_right_bone/mbasic_foot_right_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_ctrlr/mbasic_hip_ctrlr/mbasic_spine_bone/mbasic_thigh_right_bone/mbasic_knee_right_bone/mbasic_foot_right_bone/mbasic_foot_right_end_bone
+        weight: 1
+      - path: mbasic_main_ctrlr/mbasic_root_bone/mbasic_root_end_bone
+        weight: 1
+      - path: monster_basic_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
