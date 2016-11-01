@@ -49,7 +49,7 @@ public class ND_Player : MonoBehaviour {
                     }
                 }
             }
-            else if (m_Platform == RuntimePlatform.WindowsEditor)
+            else //if (m_Platform == RuntimePlatform.WindowsEditor)
             {
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -86,7 +86,6 @@ public class ND_Player : MonoBehaviour {
     {
         Ray ray = Camera.main.ScreenPointToRay(pos);
         RaycastHit hit;
-
         if (Physics.Raycast(ray, out hit))
         {
             if (hit.transform.gameObject.CompareTag("Player") && m_bSlowMotionReady && !m_bHitPunchInProgress)

@@ -16,6 +16,8 @@ public class ND_DismemberManager : MonoBehaviour
     public List<Rigidbody> rigidBodies = new List<Rigidbody>();
     public StoreTransform[] initialTransforms;
 
+    private Animator animator;
+
     // Use this for initialization
     void Start()
     {
@@ -53,6 +55,9 @@ public class ND_DismemberManager : MonoBehaviour
 
     public void Explode(Vector3 explosionPosition)
     {
+        //TODO : CLEAN no need to get the animator each time we explode, store it instead
+        if (animator == null) animator = gameObject.GetComponentInChildren<Animator>();
+        if (animator != null) animator.enabled = false;
         int i = 0;
         foreach (Transform[,] t in originalParent)
         {
@@ -75,6 +80,9 @@ public class ND_DismemberManager : MonoBehaviour
     }
     public void ResetSkelton()
     {
+        //TODO : CLEAN no need to get the animator each time we explode, store it instead
+        if (animator == null) animator = gameObject.GetComponentInChildren<Animator>();
+        if (animator != null) animator.enabled = false;
         int i = 0;
         foreach (Transform[,] t in originalParent)
         {

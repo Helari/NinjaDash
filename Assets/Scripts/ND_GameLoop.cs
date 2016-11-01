@@ -18,6 +18,7 @@ public class ND_GameLoop : MonoBehaviour {
 
     void Update()
     {
+        Screen.SetResolution(375, 600, false); Screen.orientation = ScreenOrientation.Portrait;
         if (Input.GetKeyDown(KeyCode.S))
         {
             GameEventManager.TriggerGameStart();

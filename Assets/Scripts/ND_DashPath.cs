@@ -150,7 +150,9 @@ public class ND_DashPath : MonoBehaviour {
                     }
                 }
 
-                target.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);//new Color(0.5f, 0.5f, 0.5f, 1));//(c.r - 70.0f / 255, c.g + 20.0f / 255, c.b + 40.0f / 255));
+                if (target.GetComponent<Renderer>() != null) target.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);
+                else target.GetComponentInChildren<Renderer>().material.SetColor("_Color", m_cTargetColor);
+                //target.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);//new Color(0.5f, 0.5f, 0.5f, 1));//(c.r - 70.0f / 255, c.g + 20.0f / 255, c.b + 40.0f / 255));
                 if (m_SecondLastSelected != null)
                 {
                     ND_Enemy secondEnemyComp = m_SecondLastSelected.GetComponent<ND_Enemy>();
@@ -349,7 +351,8 @@ public class ND_DashPath : MonoBehaviour {
                             }
                             else
                             {
-                                secondEnemyComp.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);
+                                if(secondEnemyComp.GetComponent<Renderer>() != null) secondEnemyComp.GetComponent<Renderer>().material.SetColor("_Color", m_cTargetColor);
+                                else secondEnemyComp.GetComponentInChildren<Renderer>().material.SetColor("_Color", m_cTargetColor);
                             }
                         }
                     }

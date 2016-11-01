@@ -23,6 +23,7 @@ public class ND_Enemy : MonoBehaviour {
 
     private bool stopped = false;
     Vector3 stopPosition = Vector3.zero;
+    private Animator animator;
     //public GameObject myDest;
 
     /// <summary>
@@ -54,6 +55,7 @@ public class ND_Enemy : MonoBehaviour {
         GameEventManager.GameOver += GameOver;
         this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f);
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
+        animator = gameObject.GetComponentInChildren<Animator>();
     }
     void Update()
     {
@@ -67,8 +69,10 @@ public class ND_Enemy : MonoBehaviour {
             //    myDest.transform.position = transform.parent.position;
             //}
             //Launch punch animation
+            if(animator == null) animator = gameObject.GetComponentInChildren<Animator>();
+            if (animator != null) animator.SetBool("IsAttack", true);
             Sequence mySequencePunch = DOTween.Sequence();
-            mySequencePunch.Append(gameObject.transform.DOShakePosition(0.5f, 0.1f, 15, 10.0f)).AppendCallback(DamagePlayer); 
+            mySequencePunch.Append(gameObject.transform.DOShakePosition(0.5f, 0.1f, 15, 10.0f)).AppendInterval(0.25f).AppendCallback(DamagePlayer);
         }
     }
     void SlowMoActivation()
@@ -76,6 +80,8 @@ public class ND_Enemy : MonoBehaviour {
         if (this != null)
         {
             m_fSlowModifier = 3.56f / (m_fSpeed * m_fSlowModifierMax);
+            if (animator != null)
+                animator.speed = 0.01f;
         }
     }
     void SlowMoDEActivation()
@@ -84,6 +90,8 @@ public class ND_Enemy : MonoBehaviour {
         {
             m_fSlowModifier = 3.56f / m_fSpeed;
             ResetColor();
+            if (animator != null)
+                animator.speed = 1.0f;
         }
     }
     public void Activate() //(Re)Activation by POOL
@@ -92,6 +100,9 @@ public class ND_Enemy : MonoBehaviour {
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
 
         gameObject.SetActive(true);
+
+        if (animator == null) animator = gameObject.GetComponentInChildren<Animator>();
+        if (animator != null) { animator.enabled = true; animator.SetBool("IsAttack", false); }
 
         m_uHPCurrent = m_uHP;
         stopped = false;
@@ -120,7 +131,7 @@ public class ND_Enemy : MonoBehaviour {
 	}
 	private IEnumerator MoveOverSpeed (GameObject objectToMove, Vector3 end, float speed){
 		// speed should be 1 unit per second
-        while (objectToMove.transform.position != stopPosition)
+        while (objectToMove.transform.position != stopPosition && !stopped)
 		{
             objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, end, m_fSlowModifier * Time.deltaTime);
 			yield return new WaitForEndOfFrame ();
