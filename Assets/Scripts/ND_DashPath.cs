@@ -17,6 +17,7 @@ public class ND_DashPath : MonoBehaviour {
     private int m_iCurrentScore = 0;
     public ND_Player m_Player;
     public Text m_DashText;
+    public Text m_DashCancelText;
     public Text m_ScoreText;
     public Color m_cTargetColor;
     public Color m_cDefaultLineColor = Color.red;
@@ -88,6 +89,7 @@ public class ND_DashPath : MonoBehaviour {
 
             m_ScoreText.text = "Score : " + m_iCurrentScore.ToString();
             m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
+            m_DashCancelText.text = "0";
         }
     }
     void SlowMoActivation()
@@ -96,6 +98,7 @@ public class ND_DashPath : MonoBehaviour {
         {
             m_iCurrentDashCount = m_Player.m_iDefaultDashCount;
             m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
+            m_DashCancelText.text = "0";
         }
     }
     void SlowMoDEActivation()
@@ -179,6 +182,7 @@ public class ND_DashPath : MonoBehaviour {
                     OnDashBonus(true, enemyComp);
                 }
                 m_DashPlanning.Add(target);
+                m_DashCancelText.text = m_DashPlanning.Count.ToString();
             }
         }
     }
@@ -303,6 +307,7 @@ public class ND_DashPath : MonoBehaviour {
                 m_iCurrentDashCount++;
                 m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
                 m_DashPlanning.RemoveAt(m_DashPlanning.Count - 1);
+                m_DashCancelText.text = m_DashPlanning.Count.ToString();
                 if(enemyComp.m_iDashBonus != 0) //Revert dash bonus
                 {
                     OnDashBonus(false, enemyComp);

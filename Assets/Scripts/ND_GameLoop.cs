@@ -6,14 +6,14 @@ public class ND_GameLoop : MonoBehaviour {
 
     public static bool isSlowMo = false;
     private bool slowMoActive = false;
-    public Button restartButton;
+    //public Button restartButton;
 
 	// Use this for initialization
     void Start()
     {
         GameEventManager.GameOver += GameOver;
         Time.timeScale = 0;
-        restartButton.gameObject.SetActive(true);
+        //restartButton.gameObject.SetActive(true);
 	}
 
     void Update()
@@ -33,11 +33,11 @@ public class ND_GameLoop : MonoBehaviour {
             slowMoActive = isSlowMo = false;
             GameEventManager.TriggerSlowMotionState_End();
         }
-	}
+    }
+    //Function called by clicking on UI button
     public void Restart()
     {
         GameEventManager.TriggerPause();
-        restartButton.gameObject.SetActive(false);
         GameEventManager.TriggerGameStart();
     }
     void GameOver()
@@ -45,7 +45,7 @@ public class ND_GameLoop : MonoBehaviour {
         if (this != null)
         {
             GameEventManager.TriggerPause();
-            restartButton.gameObject.SetActive(true);
+            //restartButton.gameObject.SetActive(true);
         }
     }
 }
