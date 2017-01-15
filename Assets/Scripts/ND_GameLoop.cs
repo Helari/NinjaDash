@@ -34,12 +34,6 @@ public class ND_GameLoop : MonoBehaviour {
             GameEventManager.TriggerSlowMotionState_End();
         }
     }
-    //Function called by clicking on UI button
-    public void Restart()
-    {
-        GameEventManager.TriggerPause();
-        GameEventManager.TriggerGameStart();
-    }
     void GameOver()
     {
         if (this != null)
@@ -47,6 +41,16 @@ public class ND_GameLoop : MonoBehaviour {
             GameEventManager.TriggerPause();
             //restartButton.gameObject.SetActive(true);
         }
+    }
+    //Function called by clicking on UI button
+    public void Restart()
+    {
+        GameEventManager.TriggerPause();
+        GameEventManager.TriggerGameStart();
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
 
