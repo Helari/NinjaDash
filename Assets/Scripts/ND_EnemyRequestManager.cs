@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// LD Script
@@ -12,6 +14,8 @@ public class ND_EnemyRequestManager : MonoBehaviour {
     public float heavyApparitionFrequency = 5.0f;
     public float shieldedApparitionFrequency = 7.0f;
     public float bombApparitionFrequency = 7.0f;
+    public bool shouldSpawnPattern = false;
+    public List<ND_EnemyPattern> patternsToSpawn = new List<ND_EnemyPattern>();
     float timer = 0.0f;
     float timerHeavy = 0.0f;
     float timerShielded = 0.0f;
@@ -60,12 +64,34 @@ public class ND_EnemyRequestManager : MonoBehaviour {
         ND_Enemy tempEnemy = ND_EnemyFactory.instance.GetObjectForType("EnemyBomb", false).GetComponent<ND_Enemy>();
         tempEnemy.Activate();
     }
+    void spawnPattern()
+    {
+        //Debug.Log("Assets/" + patternToSpawn.name + ".asset");
+        for(int j = 0; j < patternsToSpawn.Count; j++)
+        {
+            ND_EnemyPattern dataLoaded = (ND_EnemyPattern)AssetDatabase.LoadAssetAtPath("Assets/" + patternsToSpawn[j].name + ".asset", typeof(ND_EnemyPattern));
+            //Debug.Log(dataLoaded.pattern.Count.ToString());
+            for (int i = 0; i < dataLoaded.pattern.Count; i++)
+            {
+                //Debug.Log(ND_EnemyFactory.instance.objectPrefabs[dataLoaded.pattern[i].archetype].name);
+
+                ND_Enemy tempEnemy = ND_EnemyFactory.instance.GetObjectForType(ND_EnemyFactory.instance.objectPrefabs[dataLoaded.pattern[i].archetype].name, false).GetComponent<ND_Enemy>();
+                tempEnemy.transform.position = dataLoaded.pattern[i].position;
+                tempEnemy.Activate();
+            }
+        }
+    }
 
 	// Update is called once per frame
 	void Update ()
     {
         if (!GameEventManager.PauseState)
         {
+            if (shouldSpawnPattern)
+            {
+                shouldSpawnPattern = false;
+                spawnPattern();
+            }
             //timeModifier = 1.0f;
             //if(ND_Enemy.input)
             //{
@@ -98,8 +124,4 @@ public class ND_EnemyRequestManager : MonoBehaviour {
             }
         }
 	}
-    public void switchPauseState()
-    {
-        GameEventManager.TriggerPause();
-    }
 }

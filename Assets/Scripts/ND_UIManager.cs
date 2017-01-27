@@ -46,4 +46,8 @@ public class ND_UIManager : MonoBehaviour
             restartButton.gameObject.SetActive(false);
         }
     }
+    public void switchPauseState()
+    {
+        GameEventManager.TriggerPause();
+    }
 }

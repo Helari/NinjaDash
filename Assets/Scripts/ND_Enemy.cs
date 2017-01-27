@@ -9,7 +9,7 @@ using DG.Tweening;
 /// Activated after a random range after being spawned
 /// </summary>
 public class ND_Enemy : MonoBehaviour {
-
+    public int              m_ArchetypeID = 0;
     public uint             m_uHP = 1;                      //Health points
     public Color            m_DefaultColor;
     [SerializeField]
@@ -53,7 +53,7 @@ public class ND_Enemy : MonoBehaviour {
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
         GameEventManager.GameOver += GameOver;
-        this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f);
+        //this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f); //TODO Make random spawn mode
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
         animator = gameObject.GetComponentInChildren<Animator>();
     }
@@ -96,7 +96,7 @@ public class ND_Enemy : MonoBehaviour {
     }
     public void Activate() //(Re)Activation by POOL
     {
-        this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f);
+        //this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f); //TODO Make random spawn mode
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
 
         gameObject.SetActive(true);
@@ -106,7 +106,7 @@ public class ND_Enemy : MonoBehaviour {
 
         m_uHPCurrent = m_uHP;
         stopped = false;
-        StartCoroutine(ActivateEnemy(Random.Range(0, 5)));
+        StartCoroutine(ActivateEnemy(Random.Range(0, 0))); //TODO Make random spawn mode
         ResetColor();
     }
 	private IEnumerator ActivateEnemy (float delay) { //Start moving after a random delay
