@@ -56,18 +56,14 @@ public class ND_EnemyPatternCreator : EditorWindow
 
                 if(!enemyTouch)
                 {
-                    //if(m_domino[enemyIndex] != null)
                     if (GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs[enemyIndex] != null)
                     {
                         SetContainer();
 
                         Vector3 direction = Vector3.zero;
-                        //if(lastLocation != Vector3.zero)
-                        {
-                            direction = Vector3.zero - hit.point;// hit.point;//No need to change direction we always want to face the center
-                        }
+                        direction = Vector3.zero - hit.point;//No need to change direction we always want to face the center
 
-                        GameObject obj = GameObject.Instantiate(GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs[enemyIndex], new Vector3(hit.point.x, /*hit.point.y + m_domino[enemyIndex].transform.localScale.y * 0.5f*/0.0f, hit.point.z), Quaternion.LookRotation(direction)) as GameObject;
+                        GameObject obj = GameObject.Instantiate(GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs[enemyIndex], new Vector3(hit.point.x, 0.0f, hit.point.z), Quaternion.LookRotation(direction)) as GameObject;
                         obj.transform.SetParent(container);
                         obj.SetActive(true);
                         if (Application.isPlaying)
@@ -119,8 +115,7 @@ public class ND_EnemyPatternCreator : EditorWindow
             for(int i = 0; i < list.Length; i++)
             {
                 ND_EnemyTransform temp = new ND_EnemyTransform();
-                //Debug.Log(list[i].gameObject.transform.position.ToString());
-                temp.position = list[i].gameObject.transform.position;//new Vector3(list[i].gameObject.transform.position.x, list[i].gameObject.transform.position.y, list[i].gameObject.transform.position.z);
+                temp.position = list[i].gameObject.transform.position;
                 temp.rotation = list[i].gameObject.transform.rotation;
                 temp.archetype = list[i].m_ArchetypeID;
                 listTrans.Add(temp);
@@ -128,8 +123,6 @@ public class ND_EnemyPatternCreator : EditorWindow
 
             ND_EnemyPattern data = ND_EnemyPattern.CreateInstance(listTrans);
 
-
-            //AssetDatabase.GenerateUniqueAssetPath("Assets/listDomino.asset");
             AssetDatabase.CreateAsset(data, "Assets/" + PatternName + ".asset");
             AssetDatabase.SaveAssets();
         }
@@ -213,61 +206,18 @@ public class ND_EnemyPatternCreator : EditorWindow
                 enemyIndex = factory.objectPrefabs.Length - 1;
             }
         }
-		//Editor styles
-		//myColor = EditorGUILayout.ColorField(myColor); 
-        //for (int i = 0; i < NB_ARCHETYPES; i++)
-        //{
-        //    if (m_domino[i] != null)
-        //    {
-        //        GameObject test = m_domino[i];
-        //        test = (GameObject)EditorGUILayout.ObjectField(test, typeof(GameObject));
-        //    }
-        //    //SerializedProperty myArray = m_domino;
-        //    //myArray.GetArrayElementAtIndex
-        //}
-        /*serializedObject.Update();
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("objects"));
-        serializedObject.ApplyModifiedProperties();*/
 
-       // layer = EditorGUILayout.LayerField (layer);
-        //enemyIndex = EditorGUILayout.IntField(enemyIndex);
-      //  enemyIndex = EditorGUILayout.IntField(enemyIndex);
         ScriptableObject target = this;
         SerializedObject so = new SerializedObject(target);
         //SerializedProperty stringsProperty = so.FindProperty("enemyPrefabs");
 
         //EditorGUILayout.PropertyField(stringsProperty, true); // True means show children
         so.ApplyModifiedProperties(); // Remember to apply modified properties
-        //Debug.Log(stringsProperty);
+
         EditorGUILayout.LabelField("Pattern Name : ");
         PatternName = EditorGUILayout.TextField(PatternName);
-        //if (stringsProperty.arraySize > 0)
-        {
-            //if (stringsProperty.GetArrayElementAtIndex(enemyIndex).objectReferenceValue != null)
-            {
-                EditorGUILayout.LabelField("Current Selectec Enemy : " + factory.objectPrefabs[enemyIndex].name);//ND_EnemyFactory.instance.objectPrefabs[enemyIndex].name);//stringsProperty.GetArrayElementAtIndex(enemyIndex).objectReferenceValue.name);
-                //for (int i = 0; i < stringsProperty.arraySize; i++)
-                {
-                    //GameObject GO = stringsProperty.GetArrayElementAtIndex(i).Copy() as System.Object as GameObject;
-                   // GameObject GOd = stringsProperty.GetArrayElementAtIndex(i).objectReferenceValue as System.Object as GameObject;
-                    //if (GO == null)
-                    //{
-                    //    Debug.Log("NULLLLLgo" + i);
-                    //}
-                    //if (GOd == null)
-                    {
-                        //Debug.Log("NULLLLLgod" + i);
-                        //break;
-                    }
-                    //m_domino.SetValue(stringsProperty.GetArrayElementAtIndex(i).objectReferenceValue as System.Object as GameObject, i);
-                    //if (!m_domino.Contains(GOd))
-                    //{
-                    //    m_domino.Add(GOd);
-                    //}
-                    //m_domino[i] = stringsProperty.GetArrayElementAtIndex(i).objectReferenceValue as System.Object as GameObject;//objectReferenceValue//serializedObject;
-                }
-            }
-        }
+        
+        EditorGUILayout.LabelField("Current Selectec Enemy : " + factory.objectPrefabs[enemyIndex].name);
 	}
 }
 
