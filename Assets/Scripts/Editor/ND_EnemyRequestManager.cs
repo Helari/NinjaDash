@@ -69,7 +69,7 @@ public class ND_EnemyRequestManager : MonoBehaviour {
         //Debug.Log("Assets/" + patternToSpawn.name + ".asset");
         for(int j = 0; j < patternsToSpawn.Count; j++)
         {
-            ND_EnemyPattern dataLoaded = (ND_EnemyPattern)AssetDatabase.LoadAssetAtPath("Assets/" + patternsToSpawn[j].name + ".asset", typeof(ND_EnemyPattern));
+            ND_EnemyPattern dataLoaded = (ND_EnemyPattern)AssetDatabase.LoadAssetAtPath("Assets/Resources/" + patternsToSpawn[j].name + ".asset", typeof(ND_EnemyPattern));
             //Debug.Log(dataLoaded.pattern.Count.ToString());
             for (int i = 0; i < dataLoaded.pattern.Count; i++)
             {

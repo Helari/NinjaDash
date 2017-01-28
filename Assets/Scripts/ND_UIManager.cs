@@ -10,6 +10,7 @@ public class ND_UIManager : MonoBehaviour
     void Start()
     {
         GameEventManager.GameOver += GameOver;
+        GameEventManager.Victory += Victory;
         GameEventManager.GameStart += GameStart;
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
@@ -17,10 +18,20 @@ public class ND_UIManager : MonoBehaviour
         cancelDashButton.gameObject.SetActive(false);
     }
 
+    void Victory()
+    {
+        if (this != null)
+        {
+            restartButton.gameObject.GetComponentInChildren<Text>().text = "Victory !";
+            restartButton.gameObject.SetActive(true);
+            cancelDashButton.gameObject.SetActive(false);
+        }
+    }
     void GameOver()
     {
         if (this != null)
         {
+            restartButton.gameObject.GetComponentInChildren<Text>().text = "Fail !";
             restartButton.gameObject.SetActive(true);
             cancelDashButton.gameObject.SetActive(false);
         }

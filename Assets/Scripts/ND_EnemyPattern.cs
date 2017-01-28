@@ -52,4 +52,14 @@ public class ND_EnemyPattern : ScriptableObject
         data.Init(tempList);
         return data;
     }
+
+    public override string ToString()
+    {
+        string s = "";
+        foreach(PatternActor p in pattern)
+        {
+            s += "Archetype:" + p.archetype.ToString();
+        }
+        return s+base.ToString();
+    }
 }

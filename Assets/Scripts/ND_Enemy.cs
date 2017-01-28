@@ -53,6 +53,7 @@ public class ND_Enemy : MonoBehaviour {
         GameEventManager.SlowMotionState_Begin += SlowMoActivation;
         GameEventManager.SlowMotionState_End += SlowMoDEActivation;
         GameEventManager.GameOver += GameOver;
+        GameEventManager.Victory += Victory;
         //this.transform.position = GetOnUnitCircle(Random.Range(0, 360), 5.0f); //TODO Make random spawn mode
         this.transform.rotation = Quaternion.LookRotation(Vector3.zero - transform.position);
         animator = gameObject.GetComponentInChildren<Animator>();
@@ -145,6 +146,10 @@ public class ND_Enemy : MonoBehaviour {
     public void Death() //BACK to the pool
     {
         StopAllCoroutines();
+        if(!m_available)
+        {
+            ND_LevelEnemyRequestManager.enemyCount--;
+        }
         m_available = true;
         this.gameObject.SetActive(false);
     }
@@ -177,6 +182,14 @@ public class ND_Enemy : MonoBehaviour {
         }
     }
     void GameOver()
+    {
+        if (this != null)
+        {
+            ResetColor();
+            Death();
+        }
+    }
+    void Victory()
     {
         if (this != null)
         {

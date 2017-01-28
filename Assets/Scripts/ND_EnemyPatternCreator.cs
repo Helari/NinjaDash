@@ -15,8 +15,9 @@ public class ND_EnemyPatternCreator : EditorWindow
 
 	static Vector3 lastLocation = Vector3.zero;
 
-	static public Transform container;
+    static public Transform container;
     public string PatternName = "[ND_DefaultPatternName]";
+    static public bool isActive = false;
     static public int enemyIndex = 0;
     ND_EnemyFactory factory;
 
@@ -30,76 +31,79 @@ public class ND_EnemyPatternCreator : EditorWindow
     
 	static void OnScene(SceneView sceneview)
 	{
-        Event e = Event.current;
-        m_sceneViewCamera = sceneview.camera;
-        activePaint = false;
-
-        if(e.type == EventType.mouseDown && e.button == 0)
+        if (isActive)
         {
-            RaycastHit hit;
-            Ray ray = HandleUtility.GUIPointToWorldRay(e.mousePosition);
+            Event e = Event.current;
+            m_sceneViewCamera = sceneview.camera;
+            activePaint = false;
 
-            if(Physics.Raycast(ray, out hit))
+            if (e.type == EventType.mouseDown && e.button == 0)
             {
-                RaycastHit[] hitCapsule;
-                hitCapsule = Physics.CapsuleCastAll(hit.point, hit.point, 0.9f, Vector3.up);
+                RaycastHit hit;
+                Ray ray = HandleUtility.GUIPointToWorldRay(e.mousePosition);
 
-                bool enemyTouch = false;
-
-                for(int i = 0; i < hitCapsule.Length; i++)
+                if (Physics.Raycast(ray, out hit))
                 {
-                    if (hitCapsule[i].collider.CompareTag("Enemy"))
-                    {
-                        enemyTouch = true;
-                    }
-                }
+                    RaycastHit[] hitCapsule;
+                    hitCapsule = Physics.CapsuleCastAll(hit.point, hit.point, 0.9f, Vector3.up);
 
-                if(!enemyTouch)
+                    bool enemyTouch = false;
+
+                    for (int i = 0; i < hitCapsule.Length; i++)
+                    {
+                        if (hitCapsule[i].collider.CompareTag("Enemy"))
+                        {
+                            enemyTouch = true;
+                        }
+                    }
+
+                    if (!enemyTouch)
+                    {
+                        if (GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs[enemyIndex] != null)
+                        {
+                            SetContainer();
+
+                            Vector3 direction = Vector3.zero;
+                            direction = Vector3.zero - hit.point;//No need to change direction we always want to face the center
+
+                            GameObject obj = GameObject.Instantiate(GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs[enemyIndex], new Vector3(hit.point.x, 0.0f, hit.point.z), Quaternion.LookRotation(direction)) as GameObject;
+                            obj.transform.SetParent(container);
+                            obj.SetActive(true);
+                            if (Application.isPlaying)
+                            {
+                                //obj.GetComponent<Renderer>().material.color = myColor;
+                            }
+                            else
+                            {
+                                //obj.GetComponent<Renderer>().sharedMaterial.color = myColor;
+                            }
+                            lastLocation = hit.point;
+                        }
+                    }
+                    e.Use();
+                }
+            }
+            else if (e.type == EventType.Layout)
+            {
+                int controlID = GUIUtility.GetControlID(FocusType.Passive);
+                HandleUtility.AddDefaultControl(controlID);
+
+            }
+            else if (e.type == EventType.scrollWheel && e.delta.y < 0)
+            {
+                enemyIndex++;
+                if (enemyIndex >= GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs.Length)
                 {
-                    if (GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs[enemyIndex] != null)
-                    {
-                        SetContainer();
-
-                        Vector3 direction = Vector3.zero;
-                        direction = Vector3.zero - hit.point;//No need to change direction we always want to face the center
-
-                        GameObject obj = GameObject.Instantiate(GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs[enemyIndex], new Vector3(hit.point.x, 0.0f, hit.point.z), Quaternion.LookRotation(direction)) as GameObject;
-                        obj.transform.SetParent(container);
-                        obj.SetActive(true);
-                        if (Application.isPlaying)
-                        {
-                            //obj.GetComponent<Renderer>().material.color = myColor;
-                        }
-                        else
-                        {
-                            //obj.GetComponent<Renderer>().sharedMaterial.color = myColor;
-                        }
-                        lastLocation = hit.point;
-                    }
+                    enemyIndex = 0;
                 }
-            e.Use();
             }
-        }
-        else if (e.type == EventType.Layout)
-        {
-            int controlID = GUIUtility.GetControlID(FocusType.Passive);
-            HandleUtility.AddDefaultControl(controlID);
-
-        }
-        else if (e.type == EventType.scrollWheel && e.delta.y < 0)
-        {
-            enemyIndex++;
-            if (enemyIndex >= GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs.Length)
+            else if (e.type == EventType.scrollWheel && e.delta.y > 0)
             {
-                enemyIndex = 0;
-            }
-        }
-        else if (e.type == EventType.scrollWheel && e.delta.y > 0)
-        {
-            enemyIndex--;
-            if (enemyIndex < 0)
-            {
-                enemyIndex = GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs.Length - 1;
+                enemyIndex--;
+                if (enemyIndex < 0)
+                {
+                    enemyIndex = GameObject.FindObjectOfType<ND_EnemyFactory>().objectPrefabs.Length - 1;
+                }
             }
         }
     }
@@ -123,7 +127,7 @@ public class ND_EnemyPatternCreator : EditorWindow
 
             ND_EnemyPattern data = ND_EnemyPattern.CreateInstance(listTrans);
 
-            AssetDatabase.CreateAsset(data, "Assets/" + PatternName + ".asset");
+            AssetDatabase.CreateAsset(data, "Assets/Resources/" + PatternName + ".asset");
             AssetDatabase.SaveAssets();
         }
     }
@@ -131,7 +135,7 @@ public class ND_EnemyPatternCreator : EditorWindow
     {
         ND_Level data = ND_Level.CreateInstance();
 
-        AssetDatabase.CreateAsset(data, "Assets/Level.asset");
+        AssetDatabase.CreateAsset(data, "Assets/Resources/Level.asset");
     }
     void saveAssets()
     {
@@ -139,7 +143,7 @@ public class ND_EnemyPatternCreator : EditorWindow
     }
 	void loadDominos() 
     {
-        ND_EnemyPattern dataLoaded = (ND_EnemyPattern)AssetDatabase.LoadAssetAtPath("Assets/" + PatternName + ".asset", typeof(ND_EnemyPattern));
+        ND_EnemyPattern dataLoaded = (ND_EnemyPattern)AssetDatabase.LoadAssetAtPath("Assets/Resources/" + PatternName + ".asset", typeof(ND_EnemyPattern));
 
         SetContainer();
 
@@ -172,10 +176,10 @@ public class ND_EnemyPatternCreator : EditorWindow
         {
             factory = GameObject.FindObjectOfType<ND_EnemyFactory>();
         }
-        if (GUILayout.Button("Create Level"))
-        {
-            createLevelScriptable();
-        }
+        //if (GUILayout.Button("Create Level"))
+        //{
+        //    createLevelScriptable();
+        //}
         if (GUILayout.Button("Save Assets"))
         {
             saveAssets();
@@ -216,7 +220,7 @@ public class ND_EnemyPatternCreator : EditorWindow
 
         EditorGUILayout.LabelField("Pattern Name : ");
         PatternName = EditorGUILayout.TextField(PatternName);
-        
+        isActive = EditorGUILayout.Toggle("Active",isActive);
         EditorGUILayout.LabelField("Current Selectec Enemy : " + factory.objectPrefabs[enemyIndex].name);
 	}
 }
