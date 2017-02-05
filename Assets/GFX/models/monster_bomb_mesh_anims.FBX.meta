@@ -1,0 +1,807 @@
+fileFormatVersion: 2
+guid: dcf4cbc33b4d3064b86883b9458afa7c
+timeCreated: 1486284288
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: mbomb_body_bone
+    100002: mbomb_body_end_bone
+    100004: mbomb_head_bone
+    100006: mbomb_head_end_bone
+    100008: mbomb_left_leg_a_ctrlr
+    100010: mbomb_left_leg_a_IKgoal
+    100012: mbomb_left_leg_b_ctrlr
+    100014: mbomb_left_leg_b_IKgoal
+    100016: mbomb_left_leg_c_ctrlr
+    100018: mbomb_left_leg_c_IKgoal
+    100020: mbomb_leg_a_1_left_bone
+    100022: mbomb_leg_a_1_right_bone
+    100024: mbomb_leg_a_2_left_bone
+    100026: mbomb_leg_a_2_right_bone
+    100028: mbomb_leg_a_3_left_bone
+    100030: mbomb_leg_a_3_left_end_bone
+    100032: mbomb_leg_a_3_right_bone
+    100034: mbomb_leg_a_3_right_end_bone
+    100036: mbomb_leg_b_1_left_bone
+    100038: mbomb_leg_b_1_right_bone
+    100040: mbomb_leg_b_2_left_bone
+    100042: mbomb_leg_b_2_right_bone
+    100044: mbomb_leg_b_3_left_bone
+    100046: mbomb_leg_b_3_left_end_bone
+    100048: mbomb_leg_b_3_right_bone
+    100050: mbomb_leg_b_3_right_end_bone
+    100052: mbomb_leg_c_1_left_bone
+    100054: mbomb_leg_c_1_right_bone
+    100056: mbomb_leg_c_2_left_bone
+    100058: mbomb_leg_c_2_right_bone
+    100060: mbomb_leg_c_3_left_bone
+    100062: mbomb_leg_c_3_left_end_bone
+    100064: mbomb_leg_c_3_right_bone
+    100066: mbomb_leg_c_3_right_end_bone
+    100068: mbomb_light_bone
+    100070: mbomb_light_ctrlr
+    100072: mbomb_light_end_bone
+    100074: mbomb_main_ctrlr
+    100076: mbomb_right_leg_a_ctrlr
+    100078: mbomb_right_leg_a_IKgoal
+    100080: mbomb_right_leg_b_ctrlr
+    100082: mbomb_right_leg_b_IKgoal
+    100084: mbomb_right_leg_c_ctrlr
+    100086: mbomb_right_leg_c_IKgoal
+    100088: mbomb_root_bone
+    100090: mbomb_root_ctrlr
+    100092: mbomb_root_end_bone
+    100094: monster_bomb_mesh
+    100096: //RootNode
+    400000: mbomb_body_bone
+    400002: mbomb_body_end_bone
+    400004: mbomb_head_bone
+    400006: mbomb_head_end_bone
+    400008: mbomb_left_leg_a_ctrlr
+    400010: mbomb_left_leg_a_IKgoal
+    400012: mbomb_left_leg_b_ctrlr
+    400014: mbomb_left_leg_b_IKgoal
+    400016: mbomb_left_leg_c_ctrlr
+    400018: mbomb_left_leg_c_IKgoal
+    400020: mbomb_leg_a_1_left_bone
+    400022: mbomb_leg_a_1_right_bone
+    400024: mbomb_leg_a_2_left_bone
+    400026: mbomb_leg_a_2_right_bone
+    400028: mbomb_leg_a_3_left_bone
+    400030: mbomb_leg_a_3_left_end_bone
+    400032: mbomb_leg_a_3_right_bone
+    400034: mbomb_leg_a_3_right_end_bone
+    400036: mbomb_leg_b_1_left_bone
+    400038: mbomb_leg_b_1_right_bone
+    400040: mbomb_leg_b_2_left_bone
+    400042: mbomb_leg_b_2_right_bone
+    400044: mbomb_leg_b_3_left_bone
+    400046: mbomb_leg_b_3_left_end_bone
+    400048: mbomb_leg_b_3_right_bone
+    400050: mbomb_leg_b_3_right_end_bone
+    400052: mbomb_leg_c_1_left_bone
+    400054: mbomb_leg_c_1_right_bone
+    400056: mbomb_leg_c_2_left_bone
+    400058: mbomb_leg_c_2_right_bone
+    400060: mbomb_leg_c_3_left_bone
+    400062: mbomb_leg_c_3_left_end_bone
+    400064: mbomb_leg_c_3_right_bone
+    400066: mbomb_leg_c_3_right_end_bone
+    400068: mbomb_light_bone
+    400070: mbomb_light_ctrlr
+    400072: mbomb_light_end_bone
+    400074: mbomb_main_ctrlr
+    400076: mbomb_right_leg_a_ctrlr
+    400078: mbomb_right_leg_a_IKgoal
+    400080: mbomb_right_leg_b_ctrlr
+    400082: mbomb_right_leg_b_IKgoal
+    400084: mbomb_right_leg_c_ctrlr
+    400086: mbomb_right_leg_c_IKgoal
+    400088: mbomb_root_bone
+    400090: mbomb_root_ctrlr
+    400092: mbomb_root_end_bone
+    400094: monster_bomb_mesh
+    400096: //RootNode
+    4300000: monster_bomb_mesh
+    7400000: monster_bomb_tpose
+    7400002: monster_bomb_idle
+    7400004: monster_bomb_walk
+    7400006: monster_bomb_atack
+    7400008: monster_bomb_explode
+    9500000: //RootNode
+    13700000: monster_bomb_mesh
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: monster_bomb_tpose
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mbomb_main_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr/mbomb_left_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr/mbomb_left_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr/mbomb_left_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr/mbomb_right_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr/mbomb_right_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr/mbomb_right_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_body_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone/mbomb_light_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone/mbomb_head_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone/mbomb_leg_a_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone/mbomb_leg_a_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone/mbomb_leg_b_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone/mbomb_leg_b_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone/mbomb_leg_c_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone/mbomb_leg_c_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_root_end_bone
+        weight: 1
+      - path: monster_bomb_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: monster_bomb_idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mbomb_main_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr/mbomb_left_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr/mbomb_left_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr/mbomb_left_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr/mbomb_right_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr/mbomb_right_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr/mbomb_right_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_body_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone/mbomb_light_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone/mbomb_head_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone/mbomb_leg_a_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone/mbomb_leg_a_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone/mbomb_leg_b_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone/mbomb_leg_b_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone/mbomb_leg_c_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone/mbomb_leg_c_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_root_end_bone
+        weight: 1
+      - path: monster_bomb_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: monster_bomb_walk
+      takeName: Take 001
+      firstFrame: 4
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mbomb_main_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr/mbomb_left_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr/mbomb_left_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr/mbomb_left_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr/mbomb_right_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr/mbomb_right_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr/mbomb_right_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_body_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone/mbomb_light_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone/mbomb_head_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone/mbomb_leg_a_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone/mbomb_leg_a_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone/mbomb_leg_b_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone/mbomb_leg_b_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone/mbomb_leg_c_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone/mbomb_leg_c_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_root_end_bone
+        weight: 1
+      - path: monster_bomb_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: monster_bomb_atack
+      takeName: Take 001
+      firstFrame: 42
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mbomb_main_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr/mbomb_left_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr/mbomb_left_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr/mbomb_left_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr/mbomb_right_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr/mbomb_right_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr/mbomb_right_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_body_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone/mbomb_light_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone/mbomb_head_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone/mbomb_leg_a_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone/mbomb_leg_a_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone/mbomb_leg_b_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone/mbomb_leg_b_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone/mbomb_leg_c_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone/mbomb_leg_c_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_root_end_bone
+        weight: 1
+      - path: monster_bomb_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: monster_bomb_explode
+      takeName: Take 001
+      firstFrame: 74
+      lastFrame: 92
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mbomb_main_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_a_ctrlr/mbomb_left_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_b_ctrlr/mbomb_left_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_left_leg_c_ctrlr/mbomb_left_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_a_ctrlr/mbomb_right_leg_a_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_b_ctrlr/mbomb_right_leg_b_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_right_leg_c_ctrlr/mbomb_right_leg_c_IKgoal
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_body_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_body_bone/mbomb_light_ctrlr/mbomb_light_bone/mbomb_light_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_head_bone/mbomb_head_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_left_bone/mbomb_leg_a_2_left_bone/mbomb_leg_a_3_left_bone/mbomb_leg_a_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_a_1_right_bone/mbomb_leg_a_2_right_bone/mbomb_leg_a_3_right_bone/mbomb_leg_a_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_left_bone/mbomb_leg_b_2_left_bone/mbomb_leg_b_3_left_bone/mbomb_leg_b_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_b_1_right_bone/mbomb_leg_b_2_right_bone/mbomb_leg_b_3_right_bone/mbomb_leg_b_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_left_bone/mbomb_leg_c_2_left_bone/mbomb_leg_c_3_left_bone/mbomb_leg_c_3_left_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_leg_c_1_right_bone/mbomb_leg_c_2_right_bone/mbomb_leg_c_3_right_bone/mbomb_leg_c_3_right_end_bone
+        weight: 1
+      - path: mbomb_main_ctrlr/mbomb_root_ctrlr/mbomb_root_bone/mbomb_root_end_bone
+        weight: 1
+      - path: monster_bomb_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.005
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
