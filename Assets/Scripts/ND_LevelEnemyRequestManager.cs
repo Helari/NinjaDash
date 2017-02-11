@@ -18,7 +18,7 @@ public class ND_LevelEnemyRequestManager : MonoBehaviour {
     public static int enemyCount;
     bool bLevelsDone;
 
-    private float timeModifier = 1.0f; //SlowMotion reaction (affects spawn timers)
+    public static float timeModifier = 1.0f; //SlowMotion reaction (affects spawn timers)
 
     void Start()
     {

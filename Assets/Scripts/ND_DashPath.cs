@@ -434,7 +434,6 @@ public class ND_DashPath : MonoBehaviour {
     IEnumerator LastHit()
     {
         StartCoroutine(MoveOverSpeed(m_Player.gameObject, Vector3.zero, 30.0f));
-        yield return new WaitForSeconds(1.0f); // Delay to play death anims
         foreach (GameObject line in m_DashDisplay)
         {
             Destroy(line);
@@ -452,6 +451,7 @@ public class ND_DashPath : MonoBehaviour {
             if (enemy.transform.parent.gameObject.GetComponent<ND_EnemyBomb>() != null)
             {
                 m_iCurrentScore += enemy.transform.parent.gameObject.GetComponent<ND_EnemyBomb>().GenerateExplosion(colateralDamage);
+                enemy.transform.parent.gameObject.GetComponent<ND_EnemyBomb>().LaunchExplosionAnim();
             }
             if (enemy.GetComponent<ND_Enemy>() != null)
             {
@@ -495,6 +495,7 @@ public class ND_DashPath : MonoBehaviour {
             enemy.StopAllCoroutines();
         }
 
+        yield return new WaitForSeconds(1.0f); // Delay to play death anims
         yield return new WaitForSeconds(2.0f);
         foreach (GameObject enemy in m_DashPlanning)
         {

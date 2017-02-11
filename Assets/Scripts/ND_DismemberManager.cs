@@ -17,7 +17,11 @@ public class ND_DismemberManager : MonoBehaviour
     public StoreTransform[] initialTransforms;
 
     private Animator animator;
-
+    
+    float timer = 0.0f;
+    float dismemberDelay = 0.75f;
+    bool shouldDismember = false;
+    Vector3 m_explosionPosition;
     // Use this for initialization
     void Start()
     {
@@ -51,31 +55,49 @@ public class ND_DismemberManager : MonoBehaviour
         {
             ResetSkelton();
         }
+        if(shouldDismember)
+        {
+            timer += Time.deltaTime;// / ND_LevelEnemyRequestManager.timeModifier;
+            if(timer > dismemberDelay)
+            {
+                Explode(m_explosionPosition);
+                shouldDismember = false;
+                timer = 0.0f;
+            }
+        }
     }
 
     public void Explode(Vector3 explosionPosition)
     {
-        //TODO : CLEAN no need to get the animator each time we explode, store it instead
-        if (animator == null) animator = gameObject.GetComponentInChildren<Animator>();
-        if (animator != null) animator.enabled = false;
-        int i = 0;
-        foreach (Transform[,] t in originalParent)
+        if(!shouldDismember)
         {
-            //create a save of the initial positions
-            initialTransforms[i] = new StoreTransform();
-            initialTransforms[i].position = t[0, 0].transform.position;
-            initialTransforms[i].rotation = t[0, 0].transform.rotation;
-            //initialTransforms[i].localScale = t[0, 0].transform.localScale;
+            m_explosionPosition = explosionPosition;
+            shouldDismember = true;
+        }
+        else
+        {
+            //TODO : CLEAN no need to get the animator each time we explode, store it instead
+            if (animator == null) animator = gameObject.GetComponentInChildren<Animator>();
+            if (animator != null) animator.enabled = false;
+            int i = 0;
+            foreach (Transform[,] t in originalParent)
+            {
+                //create a save of the initial positions
+                initialTransforms[i] = new StoreTransform();
+                initialTransforms[i].position = t[0, 0].transform.position;
+                initialTransforms[i].rotation = t[0, 0].transform.rotation;
+                //initialTransforms[i].localScale = t[0, 0].transform.localScale;
 
-            //Then explode the body parts (unlink bones hierarchy and apply gravity)
-            t[0, 0].transform.parent = this.transform;
+                //Then explode the body parts (unlink bones hierarchy and apply gravity)
+                t[0, 0].transform.parent = this.transform;
 
-            rigidBodies[i].useGravity = true;
-            rigidBodies[i].isKinematic = false;
-            rigidBodies[i].AddExplosionForce(250.0f, explosionPosition, 150.0f);
-            rigidBodies[i].AddTorque(new Vector3(Random.Range(3.0f, 10.0f), Random.Range(-5.0f, 5.0f), Random.Range(-5.0f, 5.0f)), ForceMode.Impulse);
-            //t[0, 0].GetComponent<Rigidbody>().AddForce(new Vector3(Random.RandomRange(3.0f, 10.0f), Random.RandomRange(-5.0f, 5.0f), Random.RandomRange(-5.0f, 5.0f)), ForceMode.Impulse);
-            i++;
+                rigidBodies[i].useGravity = true;
+                rigidBodies[i].isKinematic = false;
+                rigidBodies[i].AddExplosionForce(250.0f, explosionPosition, 150.0f);
+                rigidBodies[i].AddTorque(new Vector3(Random.Range(3.0f, 10.0f), Random.Range(-5.0f, 5.0f), Random.Range(-5.0f, 5.0f)), ForceMode.Impulse);
+                //t[0, 0].GetComponent<Rigidbody>().AddForce(new Vector3(Random.RandomRange(3.0f, 10.0f), Random.RandomRange(-5.0f, 5.0f), Random.RandomRange(-5.0f, 5.0f)), ForceMode.Impulse);
+                i++;
+            }
         }
     }
     public void ResetSkelton()

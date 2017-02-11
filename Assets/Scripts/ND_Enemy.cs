@@ -9,7 +9,7 @@ using DG.Tweening;
 /// Activated after a random range after being spawned
 /// </summary>
 public class ND_Enemy : MonoBehaviour {
-    public int              m_ArchetypeID = 0;
+    public int              m_ArchetypeID = 0; //Basic : 0, Bomb : 1, Heavy : 2, Shield : 3
     public uint             m_uHP = 1;                      //Health points
     public Color            m_DefaultColor;
     [SerializeField]
@@ -103,7 +103,12 @@ public class ND_Enemy : MonoBehaviour {
         gameObject.SetActive(true);
 
         if (animator == null) animator = gameObject.GetComponentInChildren<Animator>();
-        if (animator != null) { animator.enabled = true; animator.SetBool("IsAttack", false); }
+        if (animator != null) { 
+            animator.enabled = true;
+            animator.SetBool("IsAttack", false);
+            if(m_ArchetypeID == 1) // Reset Bomb state
+                animator.SetBool("IsExplosion", false);
+        }
 
         m_uHPCurrent = m_uHP;
         stopped = false;
@@ -138,6 +143,11 @@ public class ND_Enemy : MonoBehaviour {
 			yield return new WaitForEndOfFrame ();
         }
 	}
+    public void SetAnimatorValue(string paramName, bool value)
+    {
+        animator.speed = 1.0f;
+        animator.SetBool(paramName, value);
+    }
     private void DamagePlayer() //if arrived at destination
     {
         GameEventManager.TriggerPlayerDamage();

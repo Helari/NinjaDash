@@ -35,4 +35,8 @@ public class ND_EnemyBomb : MonoBehaviour {
         }
         return totalBonusScore;
     }
+    public void LaunchExplosionAnim()
+    {
+        gameObject.GetComponent<ND_Enemy>().SetAnimatorValue("IsExplosion", true);
+    }
 }
