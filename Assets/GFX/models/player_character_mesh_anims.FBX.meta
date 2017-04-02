@@ -195,6 +195,13 @@ ModelImporter:
     7400008: player_grabsword_start
     7400010: player_grabsword_loop
     7400012: player_grabsword_end
+    7400014: player_sheathsword
+    7400016: player_jump_start
+    7400018: player_jump_loop
+    7400020: player_punch
+    7400022: player_jumpbak_loop
+    7400024: player_jumpback_land
+    7400026: player_death
     9500000: //RootNode
     13700000: player_character_mesh
   materials:
@@ -1483,6 +1490,1476 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 256
       lastFrame: 296
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pc_main_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help/pc_left_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help/pc_right_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_root_end_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone/pc_finger_index_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone/pc_finger_middle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone/pc_finger_pinky_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone/pc_finger_ring_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_nuckle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone/pc_thumb_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone/pc_finger_index_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone/pc_finger_middle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone/pc_finger_pinky_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone/pc_finger_ring_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_knuckle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone/pc_thumb_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone/pc_end_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone/pc_end_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone/pc_end_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone/pc_end_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone/pc_end_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help/pc_left_wrist_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help/pc_right_wrist_IKgoal
+        weight: 1
+      - path: player_character_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_sheathsword
+      takeName: Take 001
+      firstFrame: 298
+      lastFrame: 340
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pc_main_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help/pc_left_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help/pc_right_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_root_end_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone/pc_finger_index_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone/pc_finger_middle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone/pc_finger_pinky_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone/pc_finger_ring_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_nuckle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone/pc_thumb_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone/pc_finger_index_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone/pc_finger_middle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone/pc_finger_pinky_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone/pc_finger_ring_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_knuckle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone/pc_thumb_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone/pc_end_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone/pc_end_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone/pc_end_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone/pc_end_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone/pc_end_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help/pc_left_wrist_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help/pc_right_wrist_IKgoal
+        weight: 1
+      - path: player_character_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_jump_start
+      takeName: Take 001
+      firstFrame: 342
+      lastFrame: 358
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pc_main_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help/pc_left_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help/pc_right_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_root_end_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone/pc_finger_index_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone/pc_finger_middle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone/pc_finger_pinky_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone/pc_finger_ring_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_nuckle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone/pc_thumb_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone/pc_finger_index_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone/pc_finger_middle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone/pc_finger_pinky_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone/pc_finger_ring_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_knuckle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone/pc_thumb_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone/pc_end_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone/pc_end_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone/pc_end_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone/pc_end_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone/pc_end_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help/pc_left_wrist_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help/pc_right_wrist_IKgoal
+        weight: 1
+      - path: player_character_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_jump_loop
+      takeName: Take 001
+      firstFrame: 360
+      lastFrame: 368
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pc_main_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help/pc_left_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help/pc_right_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_root_end_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone/pc_finger_index_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone/pc_finger_middle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone/pc_finger_pinky_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone/pc_finger_ring_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_nuckle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone/pc_thumb_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone/pc_finger_index_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone/pc_finger_middle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone/pc_finger_pinky_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone/pc_finger_ring_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_knuckle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone/pc_thumb_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone/pc_end_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone/pc_end_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone/pc_end_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone/pc_end_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone/pc_end_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help/pc_left_wrist_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help/pc_right_wrist_IKgoal
+        weight: 1
+      - path: player_character_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_punch
+      takeName: Take 001
+      firstFrame: 370
+      lastFrame: 384
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pc_main_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help/pc_left_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help/pc_right_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_root_end_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone/pc_finger_index_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone/pc_finger_middle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone/pc_finger_pinky_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone/pc_finger_ring_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_nuckle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone/pc_thumb_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone/pc_finger_index_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone/pc_finger_middle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone/pc_finger_pinky_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone/pc_finger_ring_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_knuckle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone/pc_thumb_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone/pc_end_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone/pc_end_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone/pc_end_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone/pc_end_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone/pc_end_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help/pc_left_wrist_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help/pc_right_wrist_IKgoal
+        weight: 1
+      - path: player_character_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_jumpbak_loop
+      takeName: Take 001
+      firstFrame: 386
+      lastFrame: 402
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pc_main_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help/pc_left_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help/pc_right_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_root_end_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone/pc_finger_index_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone/pc_finger_middle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone/pc_finger_pinky_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone/pc_finger_ring_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_nuckle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone/pc_thumb_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone/pc_finger_index_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone/pc_finger_middle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone/pc_finger_pinky_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone/pc_finger_ring_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_knuckle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone/pc_thumb_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone/pc_end_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone/pc_end_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone/pc_end_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone/pc_end_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone/pc_end_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help/pc_left_wrist_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help/pc_right_wrist_IKgoal
+        weight: 1
+      - path: player_character_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_jumpback_land
+      takeName: Take 001
+      firstFrame: 404
+      lastFrame: 434
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pc_main_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_heelpeel_help/pc_left_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_left_foot_ctrlr/pc_left_heel_help/pc_left_toeend_help/pc_left_toetap_help/pc_left_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_ankle_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_heelpeel_help/pc_right_toe_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_right_foot_ctrlr/pc_right_heel_help/pc_right_toelift_help/pc_right_toetap_help/pc_right_toeend_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_root_end_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_index_1_left_bone/pc_finger_index_2_left_bone/pc_finger_index_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_middle_1_left_bone/pc_finger_middle_2_left_bone/pc_finger_middle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_pinky_1_left_bone/pc_finger_pinky_2_left_bone/pc_finger_pinky_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_finger_ring_1_left_bone/pc_finger_ring_2_left_bone/pc_finger_ring_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_knuckle_left_bone/pc_nuckle_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_left_bone/pc_forearm_left_bone/pc_wrist_left_bone/pc_hand_left_bone/pc_thumb1_left_bone/pc_thumb_2_left_bone/pc_thumb_end_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_index_1_right_bone/pc_finger_index_2_right_bone/pc_finger_index_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_middle_1_right_bone/pc_finger_middle_2_right_bone/pc_finger_middle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_pinky_1_right_bone/pc_finger_pinky_2_right_bone/pc_finger_pinky_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_finger_ring_1_right_bone/pc_finger_ring_2_right_bone/pc_finger_ring_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_knuckle_right_bone/pc_knuckle_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_arm_right_bone/pc_forearm_right_bone/pc_wrist_right_bone/pc_hand_right_bone/pc_thumb_1_right_bone/pc_thumb_2_right_bone/pc_thumb_3_right_bone/pc_thumb_end_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_neck_bone/pc_head_bone/pc_end_head_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_left_bone/pc_end_shoulder_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_spine1_bone/pc_spine2_bone/pc_shoulder_right_bone/pc_end_shoulder_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_left_bone/pc_knee_left_bone/pc_ankle_left_bone/pc_toe_left_bone/pc_end_toe_left_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_hip_ctrlr/pc_root_bone/pc_thigh_right_bone/pc_knee_right_bone/pc_ankle_right_bone/pc_toe_right_bone/pc_end_toe_right_bone
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_left_hand_ctrlr/pc_left_wrist_help/pc_left_wrist_IKgoal
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help
+        weight: 1
+      - path: pc_main_ctrlr/pc_root_ctrlr/pc_right_hand_ctrlr/pc_right_wrist_help/pc_right_wrist_IKgoal
+        weight: 1
+      - path: player_character_mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_death
+      takeName: Take 001
+      firstFrame: 436
+      lastFrame: 496
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
