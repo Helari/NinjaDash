@@ -9,6 +9,7 @@ public class ND_Player : MonoBehaviour {
     public float m_fSlowMotionRecastTime = 3.0f;
 
     public ND_DashPath m_DashPath;
+    public ND_PlayerAnims m_PlayerAnims;
     public Renderer m_LoadingMaterial;
     public bool m_bSlowMotionInProgress = false;
     public bool m_bSlowMotionReady = true;
@@ -32,6 +33,10 @@ public class ND_Player : MonoBehaviour {
         if (m_DashPath == null)
         {
             m_DashPath = GameObject.Find("DashPath").GetComponent<ND_DashPath>();//gameObject.GetComponent<ND_DashPath>();
+        }
+        if (m_PlayerAnims == null)
+        {
+            m_PlayerAnims = gameObject.GetComponentInChildren<ND_PlayerAnims>();
         }
 	}
 
@@ -142,15 +147,23 @@ public class ND_Player : MonoBehaviour {
             m_HPText.text = "HP : " + m_iCurrentHP.ToString();
             if(m_iCurrentHP <= 0)
             {
-                GameEventManager.TriggerGameOver();
+                m_PlayerAnims.DeathAnim(true);
+                StartCoroutine("WaitB4DeathAnim");
             }
         }
+    }
+    private IEnumerator WaitB4DeathAnim()
+    {
+        yield return new WaitForSeconds(2);
+        m_PlayerAnims.DeathAnim(false);
+        GameEventManager.TriggerGameOver();
     }
     void SlowMoActivation()
     {
         if (this != null)
         {
             m_bSlowMotionInProgress = true;
+            m_PlayerAnims.SlowMoAnim(true);
             //m_LoadingMaterial.material.SetFloat("_Cutoff", 1.0f);
         }
     }
@@ -160,6 +173,7 @@ public class ND_Player : MonoBehaviour {
         {
            // this.transform.position = new Vector3(0.33802f, 0.17451f, -0.3f);//Vector3.zero; Done in DashPath.cs at the end of Dash
             m_bSlowMotionInProgress = false;
+            m_PlayerAnims.SlowMoAnim(false);
             //StartCoroutine("resetSlowMotionDelay");
         }
     }
@@ -185,6 +199,7 @@ public class ND_Player : MonoBehaviour {
         }
         if (enemyComp != null)
         {
+            m_PlayerAnims.JumpBumpAnim(true);
             //Launch punch animation
             Vector3 enemyHitPosition = enemy.transform.position;
             m_bHitPunchInProgress = true;
@@ -193,7 +208,7 @@ public class ND_Player : MonoBehaviour {
             mySequencePunch.Append(gameObject.transform.DOLookAt((Vector3.zero - enemyHitPosition), 0.2f, AxisConstraint.Y, Vector3.up)) //WHILE LOOKINGAT
                         .Join(gameObject.transform.DOJump(enemy.transform.position, 0.5f, 1, .25f)) //JUMP
                 //.Append(gameObject.transform.DOShakePosition(0.5f, (enemy.transform.position - Vector3.zero), 15, 25.0f)) //On Jump end, Shake
-                .Append(gameObject.transform.DORotate(Vector3.zero, 0.5f)) //And Look Back home
+                .Append(gameObject.transform.DORotate(Vector3.zero, 0/*0.5f*/)) //And Look Back home
                 .Join(enemy.transform.parent.transform.DOJump((enemyHitPosition - Vector3.zero) * 2.0f, 0.25f, 1, .35f)) //And Push Ennemy
                 .Join(gameObject.transform.DOMove(Vector3.zero, 0.5f)).AppendCallback(ResetPunch); //Then Come back and Reset
             //    m_DashBonus.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.25f))
@@ -207,5 +222,6 @@ public class ND_Player : MonoBehaviour {
     {
         m_bHitPunchInProgress = false;
         m_bHitPunchReloading = false; //will be used for skill recast
+        m_PlayerAnims.JumpBumpAnim(false);
     }
 }

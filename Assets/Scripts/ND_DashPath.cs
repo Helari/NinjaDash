@@ -125,6 +125,7 @@ public class ND_DashPath : MonoBehaviour {
         if (this != null)
         {
             m_DashText.text = "";
+            StopAllCoroutines();
         }
     }
     public void TryAddNewTarget(GameObject target)
@@ -234,37 +235,65 @@ public class ND_DashPath : MonoBehaviour {
     {
         if (HasDashTargets())
         {
-            m_iCurrentTargetIndex = 0;
-            StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 30.0f));
+            m_Player.m_PlayerAnims.StartAttackAnim(true);
+            StartCoroutine("WaitB4AttackAnim");
         }
         else
         {
             GameEventManager.TriggerSlowMotionState_End();
         }
     }
-
+    private IEnumerator WaitB4AttackAnim()
+    {
+        yield return new WaitForSeconds(1.2f);
+        m_Player.m_PlayerAnims.StartAttackAnim(false);
+        m_iCurrentTargetIndex = 0;
+        StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 30.0f));
+    }
     public bool HasDashTargets()
     {
         return m_DashPlanning.Count > 0;
     }
-
-    public IEnumerator MoveOverSpeed(GameObject objectToMove, Vector3 end, float speed)
+    public void TriggerNextAttack()
     {
-        // speed should be 1 unit per second
-        while (objectToMove.transform.position != end)
-        {
-            objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, end, speed * Time.deltaTime);
-            yield return new WaitForEndOfFrame();
-        }
-        m_iCurrentTargetIndex++;
         if (m_iCurrentTargetIndex < m_DashPlanning.Count)
         {
             StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 30.0f));
         }
         else if (m_iCurrentTargetIndex == m_DashPlanning.Count)
         {
+            m_Player.m_PlayerAnims.AttackAnim(false);
+            m_Player.m_PlayerAnims.SlowMoAnim(false);
+            m_Player.m_PlayerAnims.EnemyHitAnim();
             StartCoroutine("LastHit");
         }
+    }
+    public IEnumerator MoveOverSpeed(GameObject objectToMove, Vector3 end, float speed)
+    {
+        Debug.Log(end);
+        // speed should be 1 unit per second
+        //while (objectToMove.transform.position != end)
+        //{
+        //    objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, end, speed * Time.deltaTime);
+        //    yield return new WaitForEndOfFrame();
+        //}
+        objectToMove.transform.position = end;
+        if (end != Vector3.zero) m_Player.m_PlayerAnims.AttackAnim(true);
+        m_iCurrentTargetIndex++;
+        m_Player.m_PlayerAnims.EnemyHitAnim();
+        yield return new WaitForSeconds(0.4f);
+        if (m_iCurrentTargetIndex < m_DashPlanning.Count)
+        {
+            //StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 30.0f));
+        }
+        //else if (m_iCurrentTargetIndex == m_DashPlanning.Count)
+        //{
+        //    Debug.Log("LastHit");
+        //    m_Player.m_PlayerAnims.AttackAnim(false);
+        //    m_Player.m_PlayerAnims.SlowMoAnim(false);
+        //    m_Player.m_PlayerAnims.EnemyHitAnim();
+        //    StartCoroutine("LastHit");
+        //}
     }
     void DrawLine(Vector3 start, Vector3 end, Color color) //Draws a line using LineMaterial and adds a collider to it
     {
