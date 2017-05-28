@@ -94,6 +94,7 @@ public class ND_DismemberManager : MonoBehaviour
                 rigidBodies[i].useGravity = true;
                 rigidBodies[i].isKinematic = false;
                 rigidBodies[i].AddExplosionForce(250.0f, explosionPosition, 150.0f);
+                rigidBodies[i].AddExplosionForce(100.0f, gameObject.transform.position, 10.0f);
                 rigidBodies[i].AddTorque(new Vector3(Random.Range(3.0f, 10.0f), Random.Range(-5.0f, 5.0f), Random.Range(-5.0f, 5.0f)), ForceMode.Impulse);
                 //t[0, 0].GetComponent<Rigidbody>().AddForce(new Vector3(Random.RandomRange(3.0f, 10.0f), Random.RandomRange(-5.0f, 5.0f), Random.RandomRange(-5.0f, 5.0f)), ForceMode.Impulse);
                 i++;

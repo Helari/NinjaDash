@@ -206,11 +206,12 @@ public class ND_Player : MonoBehaviour {
             m_bHitPunchReloading = true;
             Sequence mySequencePunch = DOTween.Sequence();
             mySequencePunch.Append(gameObject.transform.DOLookAt((Vector3.zero - enemyHitPosition), 0.2f, AxisConstraint.Y, Vector3.up)) //WHILE LOOKINGAT
-                        .Join(gameObject.transform.DOJump(enemy.transform.position, 0.5f, 1, .25f)) //JUMP
+                        .Join(gameObject.transform.DOJump(enemy.transform.position - (enemy.transform.position - Vector3.zero) * 0.25f, 0.5f, 1, 1)) //JUMP
+                .Insert(0.75f, enemy.transform.parent.transform.DOJump((enemyHitPosition - Vector3.zero) * 2.0f, 0.25f, 1, .35f)) //And Push Ennemy
                 //.Append(gameObject.transform.DOShakePosition(0.5f, (enemy.transform.position - Vector3.zero), 15, 25.0f)) //On Jump end, Shake
-                .Append(gameObject.transform.DORotate(Vector3.zero, 0/*0.5f*/)) //And Look Back home
-                .Join(enemy.transform.parent.transform.DOJump((enemyHitPosition - Vector3.zero) * 2.0f, 0.25f, 1, .35f)) //And Push Ennemy
-                .Join(gameObject.transform.DOMove(Vector3.zero, 0.5f)).AppendCallback(ResetPunch); //Then Come back and Reset
+                .Insert(0.85f, (gameObject.transform.DOLookAt(enemyHitPosition - Vector3.zero, 0.15f/*0.5f*/, AxisConstraint.Y, Vector3.up))) //And Look Back home
+                .Join(gameObject.transform.DOMove(Vector3.zero, 1)).AppendCallback(ResetPunch)        
+                .Append(gameObject.transform.DORotate(Vector3.zero, 0.25f)); //Then Come back and Reset
             //    m_DashBonus.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.25f))
             //  .Append(m_DashBonus.DOScale(new Vector3(0.5f, 0.5f, 0.5f), 0.25f));
             //Sequence mySequence = DOTween.Sequence();

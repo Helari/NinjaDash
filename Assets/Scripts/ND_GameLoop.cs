@@ -65,9 +65,11 @@ public class ND_GameLoop : MonoBehaviour {
 
 public static class GameEventManager {
 
+    public delegate void GameEventFromPosition(Vector3 position);
 	public delegate void GameEvent();
 
     public static event GameEvent SlowMotionState_Begin, SlowMotionState_End, DamagePlayer, GameOver, GameStart, Victory;
+    public static event GameEventFromPosition HitAnim;
     public static bool GameSlowed = false;
     public static bool PauseState = true;
 
@@ -113,6 +115,13 @@ public static class GameEventManager {
         if (GameStart != null)
         {
             GameStart();
+        }
+    }
+    public static void TriggerHitAnim(Vector3 position)
+    {
+        if (HitAnim != null)
+        {
+            HitAnim(position);
         }
     }
     public static void TriggerPause()

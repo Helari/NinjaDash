@@ -27,7 +27,6 @@ public class ND_DashPath : MonoBehaviour {
     private RaycastHit hitInfo;
     private List<Collider> deactivatedColliders = new List<Collider>();
 
-	// Use this for initialization
 	void Start () {
         if (m_Player == null)
         {
@@ -41,23 +40,13 @@ public class ND_DashPath : MonoBehaviour {
         GameEventManager.Victory += Victory;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        if(m_DashPlanning.Count > 0 && m_DashPlanning.Count != m_DashDisplay.Count)
+	void Update ()
+    {
+        if (m_DashPlanning.Count > 0 && m_DashPlanning.Count != m_DashDisplay.Count)
         {
-            if (m_DashPlanning.Count==1)
-            {
-                //Debug.Log("Create " + m_DashPlanning.Count);
-                //Debug.Log("Create " + m_DashDisplay.Count);
-                DrawLine(Vector3.zero, m_DashPlanning[0].transform.position, m_cLastLineColor);
-            }
-            else
-            {
-                DrawLine(m_DashPlanning[m_DashPlanning.Count-2].transform.position, m_DashPlanning[m_DashPlanning.Count-1].transform.position, m_cLastLineColor);
-            }
+            DrawDashPath();
         }
 	}
-
     void GameOver()
     {
         if (this != null)
@@ -79,6 +68,23 @@ public class ND_DashPath : MonoBehaviour {
         if (this != null)
         {
             ClearDashPash();
+        }
+    }
+    void SlowMoActivation()
+    {
+        if (this != null)
+        {
+            m_iCurrentDashCount = m_Player.m_iDefaultDashCount;
+            m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
+            m_DashCancelText.text = "0";
+        }
+    }
+    void SlowMoDEActivation()
+    {
+        if (this != null)
+        {
+            m_DashText.text = "";
+            StopAllCoroutines();
         }
     }
 
@@ -111,23 +117,21 @@ public class ND_DashPath : MonoBehaviour {
             deactivatedColliders.Clear();
         }
     }
-    void SlowMoActivation()
+
+    void DrawDashPath()
     {
-        if (this != null)
+        if (m_DashPlanning.Count == 1) //First Line, from Base
         {
-            m_iCurrentDashCount = m_Player.m_iDefaultDashCount;
-            m_DashText.text = "Dash Remaining : " + m_iCurrentDashCount.ToString();
-            m_DashCancelText.text = "0";
+            //Debug.Log("Create " + m_DashPlanning.Count);
+            //Debug.Log("Create " + m_DashDisplay.Count);
+            DrawLine(Vector3.zero, m_DashPlanning[0].transform.position, m_cLastLineColor);
+        }
+        else //Lines between targets
+        {
+            DrawLine(m_DashPlanning[m_DashPlanning.Count - 2].transform.position, m_DashPlanning[m_DashPlanning.Count - 1].transform.position, m_cLastLineColor);
         }
     }
-    void SlowMoDEActivation()
-    {
-        if (this != null)
-        {
-            m_DashText.text = "";
-            StopAllCoroutines();
-        }
-    }
+
     public void TryAddNewTarget(GameObject target)
     {
         //Check if enemy has still HP and if he wasn't touched the 2 previous times
@@ -254,13 +258,13 @@ public class ND_DashPath : MonoBehaviour {
     {
         return m_DashPlanning.Count > 0;
     }
-    public void TriggerNextAttack()
+    public void TriggerNextAttack() //Called from Anim when we're at the end of an anim
     {
-        if (m_iCurrentTargetIndex < m_DashPlanning.Count)
+        if (m_iCurrentTargetIndex < m_DashPlanning.Count) //If there is still enemies to hit
         {
             StartCoroutine(MoveOverSpeed(m_Player.gameObject, m_DashPlanning[m_iCurrentTargetIndex].transform.position, 30.0f));
         }
-        else if (m_iCurrentTargetIndex == m_DashPlanning.Count)
+        else if (m_iCurrentTargetIndex == m_DashPlanning.Count) //It it was the last enemy
         {
             m_Player.m_PlayerAnims.AttackAnim(false);
             m_Player.m_PlayerAnims.SlowMoAnim(false);
@@ -270,13 +274,20 @@ public class ND_DashPath : MonoBehaviour {
     }
     public IEnumerator MoveOverSpeed(GameObject objectToMove, Vector3 end, float speed)
     {
-        Debug.Log(end);
         // speed should be 1 unit per second
         //while (objectToMove.transform.position != end)
         //{
         //    objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, end, speed * Time.deltaTime);
         //    yield return new WaitForEndOfFrame();
         //}
+        if (end == Vector3.zero)
+        {
+            m_Player.gameObject.transform.rotation = Quaternion.identity;
+        }
+        else
+        {
+            objectToMove.gameObject.transform.DOLookAt((objectToMove.transform.position - end), 0.0f, AxisConstraint.Y, Vector3.up);
+        }
         objectToMove.transform.position = end;
         if (end != Vector3.zero) m_Player.m_PlayerAnims.AttackAnim(true);
         m_iCurrentTargetIndex++;
@@ -487,7 +498,8 @@ public class ND_DashPath : MonoBehaviour {
                 if (enemy.GetComponent<ND_Enemy>().ShouldDie())
                 {
                     if (enemy.GetComponent<ND_DismemberManager>() != null)
-                        enemy.GetComponent<ND_DismemberManager>().Explode(Vector3.zero);
+                        enemy.GetComponent<ND_DismemberManager>().Explode(new Vector3(0,-2,0) );
+                        //enemy.GetComponent<ND_DismemberManager>().Explode(Vector3.zero);
                     enemy.GetComponent<ND_Enemy>().StopAllCoroutines();
                 }
             }
@@ -496,7 +508,7 @@ public class ND_DashPath : MonoBehaviour {
                 if (enemy.transform.parent.gameObject.GetComponent<ND_Enemy>().ShouldDie())
                 {
                     if (enemy.transform.parent.gameObject.GetComponent<ND_DismemberManager>() != null)
-                        enemy.transform.parent.gameObject.GetComponent<ND_DismemberManager>().Explode(Vector3.zero);
+                        enemy.transform.parent.gameObject.GetComponent<ND_DismemberManager>().Explode(new Vector3(0, -2, 0));
                     enemy.transform.parent.gameObject.GetComponent<ND_Enemy>().StopAllCoroutines();
                 }
             }

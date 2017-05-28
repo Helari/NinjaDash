@@ -60,7 +60,8 @@ public class ND_Enemy : MonoBehaviour {
     }
     void Update()
     {
-        if (Vector3.Distance(gameObject.transform.position, Vector3.zero) <= Vector3.Distance(Vector3.zero, stopPosition) && !stopped)
+        //Animatior.speed = 1.0f because we don't want to be attacked while in slowmotion ? To avoid enemy disappearing while dashing on them
+        if (Vector3.Distance(gameObject.transform.position, Vector3.zero) <= Vector3.Distance(Vector3.zero, stopPosition) && !stopped && animator.speed==1.0f)
         {
             stopped = true;
             //TODO REMOVE Debug destination oriented point
