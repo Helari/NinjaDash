@@ -1077,7 +1077,7 @@ ModelImporter:
       name: player_grabsword_start
       takeName: Take 001
       firstFrame: 208
-      lastFrame: 230
+      lastFrame: 220
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1947,7 +1947,7 @@ ModelImporter:
       name: player_jump_start
       takeName: Take 001
       firstFrame: 342
-      lastFrame: 358
+      lastFrame: 346
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2157,7 +2157,7 @@ ModelImporter:
       name: player_jump_loop
       takeName: Take 001
       firstFrame: 360
-      lastFrame: 368
+      lastFrame: 366
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2367,7 +2367,7 @@ ModelImporter:
       name: player_punch
       takeName: Take 001
       firstFrame: 370
-      lastFrame: 384
+      lastFrame: 380
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
