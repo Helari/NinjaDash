@@ -3206,8 +3206,8 @@ ModelImporter:
     - serializedVersion: 16
       name: player_dash_1
       takeName: Take 001
-      firstFrame: 374
-      lastFrame: 375
+      firstFrame: 498
+      lastFrame: 498
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3417,7 +3417,7 @@ ModelImporter:
       name: player_dash_attack_1
       takeName: Take 001
       firstFrame: 500
-      lastFrame: 512
+      lastFrame: 508
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3851,7 +3851,7 @@ ModelImporter:
       name: player_dash_attack_2
       takeName: Take 001
       firstFrame: 516
-      lastFrame: 528
+      lastFrame: 524
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4285,7 +4285,7 @@ ModelImporter:
       name: player_dash_attack_3
       takeName: Take 001
       firstFrame: 532
-      lastFrame: 544
+      lastFrame: 540
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4719,7 +4719,7 @@ ModelImporter:
       name: player_dash_attack_4
       takeName: Take 001
       firstFrame: 548
-      lastFrame: 560
+      lastFrame: 556
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
