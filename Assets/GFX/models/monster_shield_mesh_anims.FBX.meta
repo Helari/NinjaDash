@@ -1,0 +1,394 @@
+fileFormatVersion: 2
+guid: f7ee45151bfab2e478a5991a75663c86
+timeCreated: 1509888417
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: monster_shield_mesh
+    100002: //RootNode
+    100004: mshield_arm_bone
+    100006: mshield_fist_bone
+    100008: mshield_fist_end_bone
+    100010: mshield_forearm_bone
+    100012: mshield_head_bone
+    100014: mshield_head_end_bone
+    100016: mshield_root_bone
+    100018: mshield_root_ctrlr
+    100020: mshield_root_end_bone
+    100022: mshield_root_helper
+    100024: mshield_shield_bone
+    100026: mshield_shield_end_bone
+    100028: mshield_torso_bone
+    100030: mshield_torso_end_bone
+    100032: mshield_torso_helper
+    100034: mshield_tracks_bone
+    100036: mshield_tracks_end_bone
+    100038: mshield_arm_ctrlr
+    100040: mshield_fist_ctrlr
+    100042: mshield_forearm_ctrlr
+    100044: mshield_head_ctrlr
+    100046: mshield_shield_ctrlr
+    100048: mshield_torso_ctrlr
+    100050: mshield_tracks_ctrlr
+    400000: monster_shield_mesh
+    400002: //RootNode
+    400004: mshield_arm_bone
+    400006: mshield_fist_bone
+    400008: mshield_fist_end_bone
+    400010: mshield_forearm_bone
+    400012: mshield_head_bone
+    400014: mshield_head_end_bone
+    400016: mshield_root_bone
+    400018: mshield_root_ctrlr
+    400020: mshield_root_end_bone
+    400022: mshield_root_helper
+    400024: mshield_shield_bone
+    400026: mshield_shield_end_bone
+    400028: mshield_torso_bone
+    400030: mshield_torso_end_bone
+    400032: mshield_torso_helper
+    400034: mshield_tracks_bone
+    400036: mshield_tracks_end_bone
+    400038: mshield_arm_ctrlr
+    400040: mshield_fist_ctrlr
+    400042: mshield_forearm_ctrlr
+    400044: mshield_head_ctrlr
+    400046: mshield_shield_ctrlr
+    400048: mshield_torso_ctrlr
+    400050: mshield_tracks_ctrlr
+    4300000: monster_shield_mesh
+    7400000: monster_shield_tpose
+    7400002: monster_shield_idlepose
+    7400004: monster_shield_walk
+    7400006: monster_shield_attack
+    9500000: //RootNode
+    13700000: monster_shield_mesh
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: monster_shield_tpose
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: monster_shield_mesh
+        weight: 1
+      - path: mshield_root_ctrlr
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone/mshield_fist_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone/mshield_fist_bone/mshield_fist_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_head_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_head_bone/mshield_head_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_shield_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_shield_bone/mshield_shield_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_tracks_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_tracks_bone/mshield_tracks_end_bone
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: monster_shield_idlepose
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: monster_shield_mesh
+        weight: 1
+      - path: mshield_root_ctrlr
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone/mshield_fist_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone/mshield_fist_bone/mshield_fist_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_head_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_head_bone/mshield_head_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_shield_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_shield_bone/mshield_shield_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_tracks_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_tracks_bone/mshield_tracks_end_bone
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: monster_shield_walk
+      takeName: Take 001
+      firstFrame: 4
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: monster_shield_mesh
+        weight: 1
+      - path: mshield_root_ctrlr
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone/mshield_fist_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone/mshield_fist_bone/mshield_fist_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_head_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_head_bone/mshield_head_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_shield_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_shield_bone/mshield_shield_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_tracks_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_tracks_bone/mshield_tracks_end_bone
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: monster_shield_attack
+      takeName: Take 001
+      firstFrame: 42
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: monster_shield_mesh
+        weight: 1
+      - path: mshield_root_ctrlr
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone/mshield_fist_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_arm_bone/mshield_forearm_bone/mshield_fist_bone/mshield_fist_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_head_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_head_bone/mshield_head_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_shield_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_torso_bone/mshield_torso_helper/mshield_shield_bone/mshield_shield_end_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_tracks_bone
+        weight: 1
+      - path: mshield_root_ctrlr/mshield_root_bone/mshield_root_helper/mshield_tracks_bone/mshield_tracks_end_bone
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.005
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

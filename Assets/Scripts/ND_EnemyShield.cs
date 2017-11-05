@@ -8,6 +8,18 @@ public class ND_EnemyShield : MonoBehaviour {
 
     private float m_fHalfShieldRadius = 90.0f;
 
+	public float scrollSpeed = 0.5F;
+	public Material m_Material;
+
+	void Start()
+	{
+		m_Material = GetComponentInChildren<SkinnedMeshRenderer>().materials[2];
+	}
+	void Update() {
+		float offset = Time.time * scrollSpeed;
+		m_Material.SetTextureOffset("_MainTex", new Vector2(0, offset));
+	}
+
     public bool CanBeTargetted(Vector3 _from)
     {
         m_fHalfShieldRadius = m_fShieldRadius * 0.5f;
